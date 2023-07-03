@@ -6,7 +6,7 @@ In the dc machine, the field winding is placed on the stator and the armature wi
 
 				
 <div align="center">
-<img class="img-fluid"  src="./images/motor1.PNG" alt="">                  
+<img class="img-fluid"  src="./images/motor1.png" alt="">                  
 </div>
 
 				
