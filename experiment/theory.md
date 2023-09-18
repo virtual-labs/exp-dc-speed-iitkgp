@@ -7,7 +7,7 @@ produce flux in the machine. Voltage induced in the armature winding is alternat
 armature terminal voltage unidirectional.<br/><br>
 
 <div align="center">
-<img class="img-fluid"  src="./images/motor1.PNG" alt=""><br>                  
+<img class="img-fluid"  src="./images/motor1.png" alt=""><br>                  
 </div><br>
 
 <br/><b>Application:</b><br/>
