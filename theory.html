@@ -1,0 +1,596 @@
+<!DOCTYPE html><html lang="en"><head>
+      <!--Google Tag Manager-->
+      <script class="gtm">
+        var dataLayer = [{
+        'labName': 'Virtual Lab',
+        'discipline': 'Test',
+        'college': 'IITKGP',
+        'phase': 'Testing',
+        'expName': 'STUDY AND OPERATION OF THE DC SPEED / POSITION CONTROL SET UP            
+    [IMAGES/IITKGP.PNG]',
+        'expShortName': 'dc-speed'
+        }];
+    
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NMQ9NQ');
+      </script>
+      <!--End Google Tag Manager-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    
+    	<meta name="experiment-short-name" content="dc-speed">
+    	<meta name="developer-institute" content="IITKGP">
+    	<meta name="learning-unit" content="STUDY AND OPERATION OF THE DC SPEED / POSITION CONTROL SET UP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    [IMAGES/IITKGP.PNG]">
+    	<meta name="task-name" content="Theory">
+    
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#4076e0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4076e0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4076e0">
+    <title>Virtual Labs</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/github-markdown.min.css">
+    <link rel="stylesheet" href="./assets/css/vlabs-style.css">
+    <link rel="stylesheet" href="./assets/katex_assets/katex.min.css">
+    
+    <script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      h1 {
+      font-size: 1.8rem;
+      }
+      h2 {
+      font-size: 1.4rem;
+      }
+      h3 {
+      font-size: 1.2rem;
+      }
+
+      h2, h3 {
+      font-weight: 800;
+      }
+    </style>
+    
+  </head>
+  <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+      <!--Google Tag Manager (noscript)-->
+      <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5NMQ9NQ" style="display:none;visibility:hidden" width="0">
+        </iframe>
+      </noscript>
+      <!--End Google Tag Manager (noscript)-->
+  
+      <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+          
+          <button class="navbar-toggler px-4" type="button" onclick="toggle()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="d-flex justify-content-center">        
+            <a href="https://vlab.co.in" class="navbar-brand">
+              <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+            </a>
+          </div>
+          
+          <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center justify-content-end">
+            <bug-report id="bug-report" title="[BUG REPORT] STUDY AND OPERATION OF THE DC SPEED / POSITION CONTROL SET UP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      [IMAGES/IITKGP.PNG]" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IITKGP&quot;,&quot;expname&quot;:&quot;STUDY AND OPERATION OF THE DC SPEED / POSITION CONTROL SET UP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\n[IMAGES/IITKGP.PNG]&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" button_style="border: none; color: #fff; background-color: #288ec8; text-align: center; font-size: 1.05rem; border-radius: 1em;padding: 0.6em 1.2em; margin: 0 10px" position="override" custom_button_class="v-button"></bug-report>
+          </div>
+        </nav>
+      </header>
+      <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row d-flex justify-content-between">
+          <div class="flex-column">
+          <div class="row py-4 px-4 breadcrumbs">
+          	<div class="title is-4 tools">Tools</div>
+          	<span class="mx-2">
+          		<i aria-hidden="true" class="fa fa-angle-right"></i>
+          	</span>
+          	<a href="performance-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Performance Tool</button>
+          	</a>
+          	<a href="validator-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Validation Tool</button>
+          	</a>
+          </div>
+          </div>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap flex-column flex-lg-row">
+          <div class="modal fade popupmenu" id="popupMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                              <a href="https://vlab.co.in" class="navbar-brand">
+                                  <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+                              </a>
+                          </h5>
+                          <button type="button" class="btn-close align-self-center" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body nav-menu">
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="index.html" class="p-2 ">
+                                      Aim
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="theory.html" class="p-2  current-item ">
+                                      Theory
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="pretest.html" class="p-2 ">
+                                      Pretest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="procedure.html" class="p-2 ">
+                                      Procedure
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="simulation.html" class="p-2 ">
+                                      Simulation
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="posttest.html" class="p-2 ">
+                                      Posttest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="references.html" class="p-2 ">
+                                      References
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="contributors.html" class="p-2 ">
+                                      Contributors
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="feedback.html" class="p-2 ">
+                                      Feedback
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex" id="menu">
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="index.html" class="p-2 ">
+                        Aim
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="theory.html" class="p-2  current-item ">
+                        Theory
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="pretest.html" class="p-2 ">
+                        Pretest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="procedure.html" class="p-2 ">
+                        Procedure
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="simulation.html" class="p-2 ">
+                        Simulation
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="posttest.html" class="p-2 ">
+                        Posttest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="references.html" class="p-2 ">
+                        References
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="contributors.html" class="p-2 ">
+                        Contributors
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="feedback.html" class="p-2 ">
+                        Feedback
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+          </div>          <div class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+            <div class="text-center fix-spacing">
+              <h2 id="study-and-operation-of-the-dc-speed--position-control-set-up--------">Study and operation of the DC Speed / Position control set up  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="images/iitkgp.png" width="3%"></h2>
+          
+            </div>
+              <h1 id="theory">Theory</h1>
+          <p><b style="color:blue">DC Machine:</b><br></p>
+          <p>In the dc machine, the field winding is placed on the stator and the armature winding on the rotor. A dc current is passed through the field winding to
+          produce flux in the machine. Voltage induced in the armature winding is alternating. A mechanical commutator and a brush assembly function as a rectifier or inverter, make the
+          armature terminal voltage unidirectional.<br><br></p>
+          <div align="center">
+          <img class="img-fluid" src="./images/motor1.png" alt=""><br>                  
+          </div><br>
+          
+          <p><br><b>Application:</b><br>
+          Although a dc machine can be operated as either a generator or a motor, at present its use as a generator is limited because of the wide spread use of ac power. The dc machine is extensively
+          used as a motor in industry. Its speed can be controlled over a wide range with relative ease. Large dc motors (in tens or hundreds of horsepower) are used in machine tools, printing
+          presses, fans, pumps, hoists, cranes, paper mills, textile mills, rolling mills, and so forth. Additionally, dc motors still dominate as traction motors used in transit cars and locomotives.
+          Small dc machines (in fractional horsepower rating) are used primarily as control devices—such as tachogenerators for speed sensing and servomotors for positioning and    tracking.
+          The dc machine definitely plays an important role in industry.<br></p>
+          <p><br><b style="color:blue">Speed Control of D.C. Motors:</b><br>
+          The term ‘speed control’ stands for intentional speed variation, carried out manually or automatically. Natural speed change due to load, is not included in the term ‘speed control’.
+          D.C. motors are most suitable for wide range speed control and are, therefore, indispensable for many adjustable speed drives. The speed of a d.c. motor is given by below equation.</p>
+          <p>$$\omega = \frac{V_t - I_a r_a}{K_a \Phi}$$</p>
+          <p>where </p>
+          <p>$$K_a = \frac{PZ}{2\pi a}$$</p>
+          <p>Where ω = Angular speed of the dc motor<br>
+          V<sub>t</sub> = Terminal voltage dc motor<br>
+          I<sub>a</sub> = Armature current of dc motor<br>
+          r<sub>a</sub> = Armature resistance of dc motor<br>
+          P = No of poles<br>
+          Z = number of armature conductors<br>
+          φ is the magnetic flux<br></p>
+          <p>there are basically three methods of speed control and these are :<br><br></p>
+          <p>(i) Variation of resistance in the armature circuit,<br>
+          (ii) Variation of the field flux, <br>
+          (iii) Variation of the armature terminal voltage.<br></p>
+          <p>Before describing these methods, it is preferable to define the terms base speed, speed    regulation, speed range, constant power drive and constant torque drive.<br></p>
+          <p><b>Base Speed:</b><br>
+          It is defined as the speed at which a motor runs at rated armature voltage and rated field current. Base speed is equal to the rated speed or nameplate speed of the motor.</p>
+          <p><br><br><b>Speed regulation:</b><br>
+          If the speed-change from no load to full load is Δω<sub>m</sub> then speed regulation is defined as the ratio of Δω<sub>m</sub> to rated speed (or base speed) ω<sub>m</sub></p>
+          <p>The percentage speed regulation = </p>
+          <p>$$\frac{\Delta \omega_m}{\omega_m}\times 100$$</p>
+          <p><br><br><b>Speed range</b><br>
+          It is defined as the ratio of the maximum allowable speed to minimum allowable speed of the motor. When the speed range of a motor is specified, it must be mentioned 
+          whether this speed range is at no-load, full load or a fraction of full load.<br></p>
+          <p><br><br><b>Constant power drive:</b><br>
+          If the motor shaft power (shaft torque &amp;times speed) remains constant over a given speed range, the system is called a constant power drive. Note that in constant 
+          power drive, higher torques are available at lower speeds and lower torques at higher speeds. The motor size is always decided by the highest torque requirement at the lowest speed.</p>
+          <p><br><br><b>Constant torque drive:</b><br>
+          If the motor shaft torque remains constant over a given speed range, the system is called a constant torque drive. Note that in constant torque drive, shaft 
+          power varies as the speed varies.</p>
+          <p><br><br><b>Magnetic Braking:</b><br>
+          Conventional braking systems in cars and bicycles utilise the friction force between two objects pressed together to slow an object down. By making use of eddy currents,
+          magnetic braking can be achieved where the electromagnetic force between a magnet and a conductor in motion is used to create a repulsive and slowing force. If a conductor moves
+          past a stationary magnet, eddy currents will be induced in the conductor by the magnet, according to Faraday’s law of induction. Eddy currents create their own magnetic field that
+          opposes the original magnetic field of the magnet. This in turn creates a drag force between the magnet and the conductor, which slows the conductor down.
+          A permanent magnet or an electromagnet can be used to create the magnetic field in a magnetic brake. A big advantage with magnetic braking is the lack of physical contact
+          between components. A disadvantage with magnetic braking is that when there is no motion between the magnet and conductor,
+          there is no static force to maintain the conductor at rest. In this case, the magnetic braking system would need to be supplemented by a friction­ based (conventional) braking system
+          like a hand brake.<br></p>
+          <!--<br/><b style="color:blue">Types of DC Motors</b><br/>
+          Two main types are Shunt motor and series motor.
+          <br/><b>Shunt Motor</b><br/>
+          
+          A schematic diagram of a shunt dc motor is shown in Fig. below. The armature circuit and the shunt field circuit are connected across a dc source of fixed voltage V<sub>t</sub>.
+          An external field rheostat (R<sub>fc</sub>) is used in the field circuit to control the speed of the motor. The motor takes power from the dc source, 
+          and therefore the current It flows into the machine from the positive terminal of the dc source. As both field circuit and armature circuit are connected to a dc source of fixed
+          voltage, the connections for separate and shunt excitation are the same. The behavior of the field circuit is independent of the armature circuit.
+          The governing equations for steady-state operation of the dc motor are as follows:
+          
+          $$V_t =I_a R_a + E_a$$
+          
+          $$I_t = I_a +I_f$$
+          
+          $$E_a = K_a \Phi \omega_m$$
+          
+          $$= V_t - I_a R_a$$
+          
+          The armature current I<sub>a</sub> and the motor speed &omega;m depend on the mechanical load connected to the motor shaft.<br/>
+          <div align="center">
+          <img class="img-fluid"  src="./images/shmotor_eq.png" alt=""><br>                  
+          </div><br>-->
+          <p><br><b>Speed Control</b><br></p>
+          <p>There are numerous applications where control of speed is required, as in rolling mills, cranes, hoists, elevators, machine tools, and transit system and locomotive drives.
+          DC motors are extensively used in many of these applications. Control of the speed of dc motors below and above the base (or rated) speed can easily be achieved.
+          Besides, the methods of control are simpler and less expensive than those applicable to ac motors. The technology of speed control of dc motors has evolved considerably
+          over the past quarter-century. In the classical method, a Ward–Leonard system with rotating machines is used for speed control of dc motors. Recently,
+          solid-state converters have been used for this purpose. In this section, various methods of speed control of dc motors are discussed.<br></p>
+          <p><br><b>1. V<sub>t</sub> Control:</b><br>
+          In the armature voltage control mode, the motor current I<sub>fm</sub> is kept constant at its rated value. The generator field current I<sub>fg</sub> is changed such that V<sub>t</sub> changes from zero to
+          its rated value. The speed will change from zero to the base speed. The torque can be maintained constant during operation in this range of speed, as shown in fig. below<br> </p>
+          <p><br><b>2.I<sub>f</sub> Control:</b><br></p>
+          <p>The field current control mode is used to obtain speed above the base speed. In this mode, the    armature voltage V<sub>t</sub> remains constant and the motor field current I<sub>fm</sub> is decreased (field
+          weakening) to obtain higher speeds. The armature current can be kept constant, there by    operating the motor in a constant horsepower mode. The torque obviously decreases as speed
+          increases, as shown in fig. below.<br></p>
+          <p><br><b>3. Armature Resistance Control Method</b><br>
+          The armature resistance control is based on the principle that the speed of the motor is directly proportional to the back emf.
+          So, if the supply voltage and the armature resistance are kept at a constant value, the speed of the motor will be directly proportional to the armature current. </p>
+          <div align="center">
+          <img class="img-fluid" src="./images/vf_if.png" alt=""><br>                  
+          </div><br>
+          
+          <p>Besides these there are other speed control methods like ward leonard system , Solid-state control using choppers and controlled rectifiers etc.</p>
+          <p><br><b>Open loop speed control:</b><br></p>
+          <p>As shown in the below figure, the armature-controlled dc motor is itself a feedback system, where back emf voltage is proportional to the speed of the motor.
+          The system may be arranged in input-output form such that V<sub>a</sub>(s) is the input and ω(s) is the output
+          The mathematical expression for open loop speed control is,</p>
+          <p>$$\omega(s) = \frac{\frac{ k_T}{R_a J}}{\frac{L_a}{R_a}s^2 + (1 + \frac{B L_a}{R_a J} )s + \frac{k_T k_b + R_a B}{R_a J}} V_{a}(s)$$</p>
+          <p>The ratio L<sub>a</sub>/ R<sub>a</sub> is called the motor electric-time constant, which makes the system speed response transfer function second order and is denoted by τ<sub>e</sub>.
+          L<sub>a</sub> in the armature circuit is very small, τ<sub>e</sub> is neglected, resulting in the simplified transfer function of the system. Thus, the speed of the motor shaft may be
+          simplified to
+          $$\omega(s) = \frac{\frac{k_T}{R_a J}}{s + \frac{k_T k_b + R_a B}{R_a J}}V_a(s)$$</p>
+          <div align="center">
+          <img class="img-fluid" src="./images/dcmol.png" alt=""><br>                  
+          </div><br>
+          
+          
+          <p><br><b>Closed loop speed control:</b><br></p>
+          <p><br>DC motors are extensively used in many drives where speed control is desired. In many applications where a constant speed is required, open-loop operation of dc motors may not be
+          satisfactory. In open-loop operation, if load torque changes, the speed will change too. In a closed-loop system, the speed can be maintained constant by adjusting the motor terminal
+          voltage as the load torque changes. The basic block diagram of a closed-loop speed control system is shown in fig. below. If an additional load torque is applied, the motor speed
+          momentarily decreases and the speed error increases, which increases the control signal V<sub>c</sub>. The control signal increases the converter output voltage (the control signal decreases
+          the firing angle if the converter is a phase-controlled rectifier, or increases the duty ratio if the converter is a chopper). An increase in the motor armature voltage develops
+          more torque to restore the speed of the motor. The system thus passes through a transient period until the developed torque matches the applied load torque.<br></p>
+          <div align="center">
+          <img class="img-fluid" src="./images/cl_cntrl.png" alt=""><br>                  
+          </div><br>
+          
+          <p>There are other advantages of closed-loop operation, such as greater accuracy, improved dynamic response, and stability of operation. In a closed-loop system the drive characteristics
+          can also be made to operate at constant torque or constant horsepower over a certain speed range, a requirement in traction systems. Circuit protection can also be provided
+          in a closed-loop system. In fact, most industrial drive systems operate as closed-loop feedback systems.<br></p>
+          <div align="center">
+          <img class="img-fluid" src="./images/dcmcl.png" alt=""><br>                  
+          </div><br>
+          
+          <p>The mathematical expression for closed loop speed control is,</p>
+          <p>$$\omega(s) = \frac{\frac{k k_T k_g}{R_a J}}{s + (\frac{k_T k_b + R_a B + k_g k_T k}{R_a J})} \omega_{in}(s)$$
+          assuming L<sub>a</sub> = 0<br></p>
+          <p>Where,</p>
+          <p>J = Moment of inertia of the motor in kg-m<sup>2</sup><br>
+          B = Viscous-friction coefficient of the motor in N-m/rad/sec<br>
+          k<sub>g</sub> = Tachogenerator constant<br>
+          k = Pre amplifier gain<br>
+          k<sub>T</sub> = Motor torque constant<br>
+          k<sub>b</sub> = Back emf constant<br>
+          R<sub>a</sub> = Armature resistance in Ω<br>
+          L<sub>a</sub> = Armature inductance in  henry<br>
+          V<sub>a</sub> = Applied armature voltage in volts<br></p>
+          <p><br><b>Closed loop position control:</b><br>
+          To control the position of the motor shaft, the simplest strategy is to use a proportional controller with gain K. The block diagram of the closed-loop system is shown in figure below.
+          The system is composed of an angular position sensor (usually an encoder or a potentiometer for position applications ). Note that, for simplicity, the input voltage can be scaled 
+          to a position input θ<sub>in</sub>(s) so that the input and output have the same units and scale. Alternatively, the output can be converted into voltage using the sensor gain value. The
+          closed-loop transfer function in this case becomes</p>
+          <p>$$\frac{\theta(s)}{\theta_{in}(s)} = \frac{\frac{k k_T k_s}{R_a J}}{s^2 + (\frac{R_a B + k_T k_b}{R_a J})s +\frac{k k_T k_s}{R_a J}}$$</p>
+          <p>k<sub>s</sub> = Sensor gain<br></p>
+          <p><b> Some important Formulas:</b><br></p>
+          <p>if V is the supply voltage, E<sub>b</sub> is the back emf produced and I<sub>a</sub>, R<sub>a</sub> are the armature current and armature resistance respectively
+          then the voltage equation is given by,</p>
+          <p>$$V = E_b + I_a R_a ----(1)$$ </p>
+          <p>we multiply both sides of equation (1) by I<sub>a</sub></p>
+          <p>$$V I_a = E_b I_a + I_a^{2} R_a ----(2)$$ </p>
+          <p>Now Ia<sup>2</sup>Ra is the power loss due to heating of the armature coil, and the true effective mechanical power that is required to produce the desired torque of DC machine
+          is given by,</p>
+          <p>$$p_m = E_b I_a -----------(3)$$</p>
+          <p>The mechanical power P<sub>m</sub> is related to the electromagnetic torque T<sub>g</sub> as,</p>
+          <p>$$p_m = T_g \omega -----------(4)$$</p>
+          <p>Where, ω is speed in rad/sec.Now equating equation (3) and (4) we get,</p>
+          <p>$$E_b I_a = T_g \omega -----------(5)$$</p>
+          <p>Now for simplifying the torque equation of DC motor we substitute.</p>
+          <p>$$E_b = \frac{P \phi Z N}{60A} -----------(6)$$ </p>
+          <p>Substituting equation (5) and (6) in equation (3), we get:</p>
+          <p>$$T_g = \frac{P \phi Z I_a}{2\pi A} -----------(7)$$ </p>
+          <p>This is the torque equation of DC motor. It can be further simplified as:</p>
+          <p>$$T_g = K_a \phi I_a$$</p>
+          <p>where,</p>
+          <p>$$K_a = \frac{PZ}{2 \pi A}$$ </p>
+          <p>Where, P is no of poles,<br>
+          φ is flux per pole,<br>
+          Z is no. of conductors,<br>
+          A is no. of parallel paths,<br>
+          and N is the speed of the DC motor</p>
+          <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>                                
+          
+          </div>
+          <div class="bug-report-mobile">
+              <bug-report id="bug-report" title="[BUG REPORT] STUDY AND OPERATION OF THE DC SPEED / POSITION CONTROL SET UP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          [IMAGES/IITKGP.PNG]" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IITKGP&quot;,&quot;expname&quot;:&quot;STUDY AND OPERATION OF THE DC SPEED / POSITION CONTROL SET UP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\n[IMAGES/IITKGP.PNG]&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" position="override" button_style="
+                          position: fixed; 
+                          bottom: 20px;
+                          right: 20px;
+                          z-index: 1;
+                          font-size: 0;
+                          padding: 25px;
+                          border-radius: 50%;
+                          border: none;
+                          background-color: #0fc0ff;
+                          background-image: url(data:image/png;base64,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);
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          background-size: 30px;
+                          filter: invert(1);">
+              </bug-report>
+          </div>        </div>
+      </div>
+      <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+        <div class="row px-5 mx-0">
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Community Links</span>
+            <a href="https://www.sakshat.ac.in/" class="text-light">Sakshat Portal</a>
+            <a href="http://outreach.vlabs.ac.in/" class="text-light">Outreach Portal</a>
+            <a href="https://vlab.co.in/faq" class="text-light">FAQ: Virtual Labs</a>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Contact Us</span>
+            <span> Phone: General Information: 011-26582050 </span>
+            <span> Email: support@vlabs.ac.in </span>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Follow Us</span>
+            <div class="social-links">
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+      	  <i class="fa fa-twitter"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+      	  <i class="fa fa-facebook"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+      	  <i class="fa fa-youtube"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+      	  <i class="fa fa-linkedin"></i>
+      	</a>
+            </div>
+          </div>
+        </div>
+        <div class="m-0 py-2 text-center" style="font-family: &quot;Open Sans&quot;, sans-serif; background: #212121;">
+          <a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+          &nbsp;&amp;&nbsp;
+          <a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons (CC BY-NC-SA 4.0) </a>
+        </div>
+      </footer>
+    <script src="./assets/js/toggleSidebar.js"></script>
+    <script src="./assets/js/event-handler.js"></script>
+
+  
+
+<script type="module" src="https://virtual-labs.github.io/svc-bug-report/client/src/bug-report.js"></script></body></html>
