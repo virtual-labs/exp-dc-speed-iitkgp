@@ -1,7 +1,7 @@
 ## References
 #### Books
 
-1) Electrical Machinery-Dr P S Bimbhra, Khanna Publishers
+1) Electrical Machinery-Dr P S Bimbhra, Khanna Publishers (7th ed., 2011)
 
 2) Principles of Electric Machines and Power Electronics-P. C. Sen ,Wiley (2013)
 
