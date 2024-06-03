@@ -55,7 +55,7 @@ If the speed-change from no load to full load is <span style="font-family:'Bodon
 <span style="font-family:'Bodoni MT'">&Delta;<i>&omega;<sub>m</sub></i></span> to rated speed (or base speed) <i style="font-family:'Bodoni MT'">&omega;<sub>m</sub></i>.
 Hence the percentage speed regulation (<span style="font-family:'Bodoni MT'"><i>S<sub>r</sub></i></span>) is,
 
-$$S_r = \frac{\Delta \omega_m}{\omega_m}\times 100 \ \% \ ---( 2) $$
+$$S_r = \frac{\Delta \omega_m}{\omega_m}\times 100 \ \% \ ---(2) $$
 
 <br/><br/><b>Speed range</b><br/>
 It is defined as the ratio of the maximum allowable speed to minimum allowable speed of the motor. When the speed range of a motor is specified, it must be mentioned 
