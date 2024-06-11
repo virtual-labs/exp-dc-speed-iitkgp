@@ -111,7 +111,7 @@
         "a": "Armature resistance control",
         "b": "Field control",
         "c": "Ward Leonard control",
-        "d": "Flux control mthod"
+        "d": "Flux control method"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
