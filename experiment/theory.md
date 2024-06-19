@@ -22,7 +22,7 @@ The dc machine definitely plays an important role in industry.<br/>
 The term 'speed control' stands for intentional speed variation, carried out manually or automatically. Natural speed change due to load, is not included in the term 'speed control'.
 DC motors are most suitable for wide range speed control and are therefore indispensable for many adjustable speed drives. The speed of a dc motor is given by below equation.
 
-$$\omega = \frac{V_t - I_a r_a}{K_a \Phi} ---(1)$$
+$$\omega = \frac{V_t - I_a r_a}{K_a \Phi} \tag 1$$
 
 where 
 
@@ -54,7 +54,7 @@ It is defined as the speed at which a motor runs at rated armature voltage and r
 If the speed-change from no load to full load is <span style="font-family:'Bodoni MT'">&Delta;<i>&omega;<sub>m</sub></i></span> then speed regulation is defined as the ratio of 
 <span style="font-family:'Bodoni MT'">&Delta;<i>&omega;<sub>m</sub></i></span> to rated speed (or base speed) <i style="font-family:'Bodoni MT'">&omega;<sub>m</sub></i>.
 Hence the percentage speed regulation (<span style="font-family:'Bodoni MT'"><i>S<sub>r</sub></i></span>) is,
-$$S_r = \frac{\Delta \omega_m}{\omega_m}\times \ 100  ---(2)$$
+$$S_r = \frac{\Delta \omega_m}{\omega_m}\times \ 100  \tag 2$$
 <b>Speed range</b><br/>
 It is defined as the ratio of the maximum allowable speed to minimum allowable speed of the motor. When the speed range of a motor is specified, it must be mentioned 
 whether this speed range is at no-load, full load or a fraction of full load.<br/>
@@ -120,13 +120,13 @@ The system may be arranged in input-output form such that <span><i style="font-f
 
 The mathematical expression for open loop speed control is,
 
-$$\omega(s) = \frac{\frac{ k_T}{R_a J}}{\frac{L_a}{R_a}s^2 + (1 + \frac{B L_a}{R_a J} )s + \frac{k_T k_b + R_a B}{R_a J}} V_{a}(s) ---(3)$$
+$$\omega(s) = \frac{\frac{ k_T}{R_a J}}{\frac{L_a}{R_a}s^2 + (1 + \frac{B L_a}{R_a J} )s + \frac{k_T k_b + R_a B}{R_a J}} V_{a}(s) \tag 3$$
 
 The ratio <i style="font-family:'Bodoni MT'">L<sub>a</sub>/ R<sub>a</sub></i> is called the motor electric-time constant, which makes the system speed response transfer function second order
 and is denoted by <i style="font-family:'Bodoni MT';font-size:18px">&tau;<sub>e</sub></i>.	<i style="font-family:'Bodoni MT'">L<sub>a</sub></i> in the armature circuit is very small, 
 <i style="font-family:'Bodoni MT';font-size:18px">&tau;<sub>e</sub></i> is neglected, resulting in the simplified transfer function of the system. Thus, the speed of the motor shaft may be simplified to
 
-$$\omega(s) = \frac{\frac{k_T}{R_a J}}{s + \frac{k_T k_b + R_a B}{R_a J}}V_a(s) ---(4)$$
+$$\omega(s) = \frac{\frac{k_T}{R_a J}}{s + \frac{k_T k_b + R_a B}{R_a J}}V_a(s) \tag 4$$
 
 <div align="center">
 <img class="img-fluid"  src="./images/dcmol.png" alt=""><br>
@@ -154,7 +154,7 @@ using the tachometer gain <i style="font-family:'Bodoni MT';font-size:18px">k</i
 
 The mathematical expression for closed loop speed control is,
 
-$$\omega(s) = \frac{\frac{k k_T k_g}{R_a J}}{s + (\frac{k_T k_b + R_a B + k_g k_T k}{R_a J})} \omega_{in}(s) ---(5)$$
+$$\omega(s) = \frac{\frac{k k_T k_g}{R_a J}}{s + (\frac{k_T k_b + R_a B + k_g k_T k}{R_a J})} \omega_{in}(s) \tag 5$$
 
 assuming <i style="font-family:'Bodoni MT'">L<sub>a</sub></span></i> = 0<br/>
 
@@ -177,7 +177,7 @@ The system is composed of an angular position sensor (usually an encoder or a po
 to a position input <span><i style="font-family:'Bodoni MT'">&theta;<sub>in</sub></i>(s)</span> so that the input and output have the same units and scale. Alternatively, the output can be converted into voltage using the sensor gain value. The
 closed-loop transfer function in this case becomes,
 
-$$\frac{\theta(s)}{\theta_{in}(s)} = \frac{\frac{k k_T k_s}{R_a J}}{s^2 + (\frac{R_a B + k_T k_b}{R_a J})s +\frac{k k_T k_s}{R_a J}} ----(6)$$
+$$\frac{\theta(s)}{\theta_{in}(s)} = \frac{\frac{k k_T k_s}{R_a J}}{s^2 + (\frac{R_a B + k_T k_b}{R_a J})s +\frac{k k_T k_s}{R_a J}} \tag 6$$
 
 <i style="font-family:'Bodoni MT';font-size:18px">k<sub>s</sub></i> = Sensor gain<br/>
 
@@ -193,36 +193,36 @@ Let us consider <i style="font-family:'Bodoni MT'">V</i> is the supply voltage, 
 <i style="font-family:'Bodoni MT'">I<sub>a</sub>, R<sub>a</sub></i> are the armature current and armature resistance respectively of a dc motor.
 Then the voltage equation is given by,
 
-$$V = E_b + I_a R_a ----(7)$$ 
+$$V = E_b + I_a R_a \tag 7$$ 
 
 we multiply both sides of equation (7) by <i style="font-family:'Bodoni MT'">I<sub>a</sub></i>
 
-$$V I_a = E_b I_a + I_a^{2} R_a ----(8)$$ 
+$$V I_a = E_b I_a + I_a^{2} R_a \tag 8$$ 
 
 Now <i style="font-family:'Bodoni MT'">I<sub>a</sub><sup>2</sup>R<sub>a</sub></i> is the power loss due to heating of the armature coil and the true effective mechanical power that is required to produce the desired torque of dc machine
 is given by,
 
-$$p_m = E_b I_a -----------(9)$$
+$$p_m = E_b I_a \tag 9$$
 
 The mechanical power <i style="font-family:'Bodoni MT';font-size:18px">p<sub>m</sub></sub></i> is related to the electromagnetic torque <i><span style="font-family:'Bodoni MT'">T</span><span style="font-family:'calibri'"><sub>g</sub></span></i> as,
 
-$$p_m = T_g \omega -----------(10)$$
+$$p_m = T_g \omega \tag {10}$$
 
 Where, <i style="font-family:'Bodoni MT';font-size:18px">&omega;</i> is speed in rad/sec. Now equating equation (9) and (10) we get,
 
-$$E_b I_a = T_g \omega -----------(11)$$
+$$E_b I_a = T_g \omega \tag {11}$$
 
 For simplifying the torque equation of dc motor we substitute.
 
-$$E_b = \frac{P \phi Z N}{60A} -----------(12)$$ 
+$$E_b = \frac{P \phi Z N}{60A} \tag {12}$$ 
 
 Substituting equation (12) in (11), we get:
 
-$$T_g = \frac{P \phi Z I_a}{2\pi A} -----------(13)$$ 
+$$T_g = \frac{P \phi Z I_a}{2\pi A} \tag {13}$$ 
 
 This is the torque equation of dc motor. It can be further simplified as:
 
-$$T_g = K_a \ \phi I_a ---(14)$$
+$$T_g = K_a \ \phi I_a \tag {14}$$
 
 where,
 
