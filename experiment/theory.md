@@ -1,6 +1,6 @@
 # Theory
 
-<b>DC Machine</b><br/>
+<b>DC Machine </b><br/>
 
 In the dc machine, the field winding is placed on the stator and the armature winding on the rotor. A dc current is passed through the field winding to
 produce flux in the machine. Voltage induced in the armature winding is alternating. A mechanical commutator and a brush assembly function as a rectifier or inverter, make the
@@ -11,14 +11,14 @@ armature terminal voltage unidirectional.<br/><br>
 <b>Fig. 1. Cross section view of a dc machine</b>
 </div><br>
 
-<br/><b>Application</b><br/>
+<br/><b>Application </b><br/>
 Although a dc machine can be operated as either a generator or a motor, at present its use as a generator is limited because of the wide spread use of ac power. The dc machine is extensively
 used as a motor in industry. Its speed can be controlled over a wide range with relative ease. Large dc motors (in tens or hundreds of horsepower) are used in machine tools, printing
 presses, fans, pumps, hoists, cranes, paper mills, textile mills, rolling mills and so forth. Additionally, dc motors still dominate as traction motors used in transit cars and locomotives.
 Small dc machines (in fractional horsepower rating) are used primarily as control devices, such as tachogenerators for speed sensing and servomotors for positioning and tracking.
 The dc machine definitely plays an important role in industry.<br/>
 
-<br/><b>Speed Control of DC Motors</b><br/>
+<br/><b>Speed Control of DC Motors </b><br/>
 The term 'speed control' stands for intentional speed variation, carried out manually or automatically. Natural speed change due to load, is not included in the term 'speed control'.
 DC motors are most suitable for wide range speed control and are therefore indispensable for many adjustable speed drives. The speed of a dc motor is given by below equation.
 
@@ -39,7 +39,7 @@ where <br/>
 <span style="font-family:'Bodoni MT'">&Phi;</span> is the magnetic flux<br/><br/>
 
 
-There are basically three methods of speed control and these are<br/>
+There are basically three methods of speed control and these are <br/>
 
 (i) Variation of resistance in the armature circuit<br/>
 (ii) Variation of the field flux <br/>
@@ -47,27 +47,29 @@ There are basically three methods of speed control and these are<br/>
 
 Before describing these methods, it is preferable to define the terms base speed, speed	regulation, speed range, constant power drive and constant torque drive.<br/>
 
-<b>Base Speed</b><br/>
+<b>Base Speed </b><br/>
 It is defined as the speed at which a motor runs at rated armature voltage and rated field current. Base speed is equal to the rated speed or nameplate speed of the motor.
 
-<br/><br/><b>Speed regulation</b><br/>
+<br/><br/><b>Speed regulation </b><br/>
 If the speed-change from no load to full load is <span style="font-family:'Bodoni MT'">&Delta;<i>&omega;<sub>m</sub></i></span> then speed regulation is defined as the ratio of 
 <span style="font-family:'Bodoni MT'">&Delta;<i>&omega;<sub>m</sub></i></span> to rated speed (or base speed) <i style="font-family:'Bodoni MT'">&omega;<sub>m</sub></i>.
-Hence the percentage speed regulation (<span style="font-family:'Bodoni MT'"><i>S<sub>r</sub></i></span>) is,
-$$S_r = \frac{\Delta \omega_m}{\omega_m}\times \ 100  \tag 2$$
-<b>Speed range</b><br/>
+Hence the percentage speed regulation (<span style="font-family:'Bodoni MT'"><i>S<sub>r</sub></i></span>) is,				 
+
+$$S_r = \frac{\Delta \omega_m}{\omega_m}\times 100 \ \ \tag 2%$$
+
+<br/><br/><b>Speed range</b><br/>
 It is defined as the ratio of the maximum allowable speed to minimum allowable speed of the motor. When the speed range of a motor is specified, it must be mentioned 
 whether this speed range is at no-load, full load or a fraction of full load.<br/>
 
-<br/><br/><b>Constant power drive</b><br/>
+<br/><br/><b>Constant power drive </b><br/>
 If the motor shaft power (shaft torque &times speed) remains constant over a given speed range, the system is called a constant power drive. In constant 
 power drive, higher torques are available at lower speeds and lower torques at higher speeds. The motor size is always decided by the highest torque requirement at the lowest speed.
 
-<br/><br/><b>Constant torque drive</b><br/>
+<br/><br/><b>Constant torque drive </b><br/>
 If the motor shaft torque remains constant over a given speed range, the system is called a constant torque drive. In constant torque drive, shaft 
 power varies as the speed varies.
 
-<br/><br/><b>Magnetic Braking</b><br/>
+<br/><br/><b>Magnetic Braking </b><br/>
 
 Conventional braking systems in cars and bicycles utilise the friction force between two objects pressed together to slow an object down. By making use of eddy currents,
 magnetic braking can be achieved where the electromagnetic force between a magnet and a conductor in motion is used to create a repulsive and slowing force. If a conductor moves
@@ -79,7 +81,7 @@ there is no static force to maintain the conductor at rest. In this case, the ma
 like a hand brake.<br/>
 
 
-<br/><b>Speed Control</b><br/>
+<br/><b>Speed Control </b><br/>
 
 There are numerous applications where control of speed is required, as in rolling mills, cranes, hoists, elevators, machine tools, transit system and locomotive drives.
 DC motors are extensively used in many of these applications. Control of the speed of dc motors below and above the base (or rated) speed can easily be achieved.
@@ -89,12 +91,12 @@ solid-state converters have been used for this purpose. In this section, various
 In order to achieve wider speed control range, speeds below base speed are obtained by voltage control and above base speed by field flux control.
 
 
-<br/><b>1. Armature voltage control (<span style="font-family:'Times New Roman'">V<sub>a</sub></span>)</b><br/>
+<br/><b>1. Armature voltage control (<span style="font-family:'Times New Roman'">V<sub>a</sub></span>) </b><br/>
 In the armature voltage control mode, the speed control is carried out with rated armature current and constant motor field flux. A constant torque upto base speed is obtained.
 Power (torque &times; speed) increases in proportion to speed. Thus constant torque and variable power drive is obtained upto base speed 
 with armature terminal voltage control method as shown in Fig. 2.<br/>
 
-<br/><b>2. Field current control (<span style="font-family:'Times New Roman'">I<sub>f</sub></span>)</b><br/>
+<br/><b>2. Field current control (<span style="font-family:'Times New Roman'">I<sub>f</sub></span>) </b><br/>
 
 The field current control mode is used to obtain speed above the base speed. In this mode, the	armature voltage <span style="font-family:'Times New Roman'">V<sub>a</sub></span> remains constant and 
 the motor field current is decreased (field weakening) to obtain higher speeds. The armature current can be kept constant, there by operating the motor in a constant horsepower mode. The torque obviously decreases as speed
@@ -112,7 +114,7 @@ So, if the supply voltage and the armature resistance are kept at a constant val
 
 Besides these there are other speed control methods like ward leonard system , Solid-state control using choppers and controlled rectifiers etc.
 
-<br/><br/><b>Open loop speed control</b><br/>
+<br/><br/><b>Open loop speed control </b><br/>
 
 As shown in Fig. 3 , the armature-controlled dc motor is itself a feedback system, where back emf voltage is proportional to the speed of the motor.
 The system may be arranged in input-output form such that <span><i style="font-family:'Bodoni MT'">V<sub>a</sub></i>(s)</span> is the input and 
@@ -134,7 +136,7 @@ $$\omega(s) = \frac{\frac{k_T}{R_a J}}{s + \frac{k_T k_b + R_a B}{R_a J}}V_a(s) 
 </div><br>
 
 
-<br/><b>Closed loop speed control</b><br/>
+<br/><b>Closed loop speed control </b><br/>
 
 <br/>DC motors are extensively used in many drives where speed control is desired. In many applications where a constant speed is required, open-loop operation of dc motors may not be
 satisfactory. In open-loop operation, if load torque changes, the speed will change too. In a closed-loop system, the speed can be maintained constant by adjusting the motor terminal
@@ -158,7 +160,7 @@ $$\omega(s) = \frac{\frac{k k_T k_g}{R_a J}}{s + (\frac{k_T k_b + R_a B + k_g k_
 
 assuming <i style="font-family:'Bodoni MT'">L<sub>a</sub></span></i> = 0<br/>
 
-where,<br/>
+Where,<br/>
 
 <i style="font-family:'Bodoni MT'">J</i> = Moment of inertia of the motor in kg-m<sup>2</sup><br/>
 <i style="font-family:'Bodoni MT'">B</i> = Viscous-friction coefficient of the motor in N-m/rad/sec<br/>
@@ -170,7 +172,7 @@ where,<br/>
 <i style="font-family:'Bodoni MT'">L<sub>a</sub></i> = Armature inductance in  henry<br/>
 <i style="font-family:'Bodoni MT'">V<sub>a</sub></i> = Applied armature voltage in volts<br/>
 
-<br/><b>Closed loop position control</b><br/>
+<br/><b>Closed loop position control </b><br/>
 To control the position of the motor shaft, the simplest strategy is to use a proportional controller with gain <span style="font-family:'Bodoni MT';font-size:18px"><i>k</i></span>. 
 The block diagram of the closed-loop position control system is shown in Fig. 5.
 The system is composed of an angular position sensor (usually an encoder or a potentiometer for position applications). For simplicity, the input voltage can be scaled 
@@ -235,8 +237,6 @@ Where,<br/>
 <i style="font-family:'Bodoni MT'">Z</i> is number of conductors of the dc motor,<br/>
 <i style="font-family:'Bodoni MT'">A</i> is number of parallel paths of the dc motor,<br/>
 and <i style="font-family:'Bodoni MT'">N</i> is the speed of the dc motor in rpm
-
-
 
 						
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>								

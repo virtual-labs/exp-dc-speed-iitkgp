@@ -179,16 +179,43 @@ jsPlumb.ready(function () {
 			e43 = prepare_ground("bd43");
 			
 			
+			
+			
+			
              instance.connect({ source: e28, target: e38 });
+			 
+			 e28.canvas.style.pointerEvents = "none";///disable first
+			 e28.setEnabled(false);///stop the reconnection
+			e38.canvas.style.pointerEvents = "none";///disable first
+			 e38.setEnabled(false);///stop the reconnection
+			 e32.canvas.style.pointerEvents = "none";///disable first
+			 e32.setEnabled(false);///stop the reconnection
+			e33.canvas.style.pointerEvents = "none";///disable first
+			 e33.setEnabled(false);///stop the reconnection
+			e37.canvas.style.pointerEvents = "none";///disable first
+			 e37.setEnabled(false);///stop the reconnection
+			
 			 //instance.connect({ source: e1, target: e13 });
 			// instance.connect({ source: e2, target: e14 });
-			 
+			var name1, name2; 
 			 //delete clicked connection
       instance.bind("click", function (conn, originalEvent) {
 		  
-           if ( confirm("Delete connection ?")) {////for clicking on a connection
+           if((conn.sourceId!='bd28' && conn.targetId!='bd38')){
+				
+				///NEW ADDED FOR LOOP TO DISPLAY ENDPOINT NAMES DURING DELETE CONNECTION
+		 for(var cpoint =1; cpoint<=43; cpoint++){
+			 if(conn.sourceId=='bd'+cpoint){
+				 name1 = document.getElementById(conn.sourceId).getAttribute("name");
+			 }
+			 if(conn.targetId=='bd'+cpoint){ 
+		  name2= document.getElementById(conn.targetId).getAttribute("name");
+		 }
+		 } 
+           if ( confirm('Delete connection from'+' ' + name1 +' '+ 'to' + ' '+ name2 + '?')) {////for clicking on a connection
                instance.deleteConnection(conn);			  
 			         }
+		   }
        }); 
 		
   

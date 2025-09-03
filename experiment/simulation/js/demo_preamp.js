@@ -158,14 +158,29 @@ jsPlumb.ready(function () {
 			e22 = prepare("bd22"),
             e23 = prepare("bd23");
 			
+			e10.canvas.style.pointerEvents = "none";///disable first
+			 e10.setEnabled(false);///stop the reconnection
+			e11.canvas.style.pointerEvents = "none";///disable first
+			 e11.setEnabled(false);///stop the reconnection
+			e15.canvas.style.pointerEvents = "none";///disable first
+			 e15.setEnabled(false);///stop the reconnection
 			
              //instance.connect({ source: e28, target: e38 });
-			 
+			var name1, name2; 
 			 
 			 //delete clicked connection
       instance.bind("click", function (conn, originalEvent) {
 		  
-           if ( confirm("Delete connection ?")) {////for clicking on a connection
+           ///NEW ADDED FOR LOOP TO DISPLAY ENDPOINT NAMES DURING DELETE CONNECTION
+		 for(var cpoint =1; cpoint<=23; cpoint++){
+			 if(conn.sourceId=='bd'+cpoint){
+				 name1 = document.getElementById(conn.sourceId).getAttribute("name");
+			 }
+			 if(conn.targetId=='bd'+cpoint){ 
+		  name2= document.getElementById(conn.targetId).getAttribute("name");
+		 }
+		 } 
+           if ( confirm('Delete connection from'+' ' + name1 +' '+ 'to' + ' '+ name2 + '?')) {////for clicking on a connection
                instance.deleteConnection(conn);			  
 			         }
        }); 
