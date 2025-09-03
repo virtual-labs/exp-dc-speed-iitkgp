@@ -7,7 +7,7 @@
 <b>Discipline | <b> Electrical Engineering 
 :--|:--|
 <b> Lab | <b> **Control and Instrumentation Laboratory**
-<b> Experiment|     <b> **Study and operation of the DC speed and position control setup**
+<b> Experiment|     <b> **Study and Operation of the DC Speed and Position Control Setup**
 
 
 ### About the Experiment 

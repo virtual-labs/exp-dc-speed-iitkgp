@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en"><!--html tag start-->
 <head>
-    <title>Study and operation of the DC Speed and Position control setup</title>
+    <title>Study and Operation of the DC Speed and Position Control Setup</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -107,6 +107,8 @@ background-color: #11B8C9;
   
   
 </head>
+
+
 <body><!--body tag start-->
     <div class="container p-3 my-3 text-primary text-center border"><!--First Container under body tag start-->
         <div class="row"><!--First row under 1st container start-->
@@ -149,21 +151,33 @@ background-color: #11B8C9;
 					
                       <li>First connect the circuit diagram properly through the connecting dots (black dots) according to the instructions below.<br/><br/>
 					  
-					  Attenuator Unit upper potentiometer point 1 - Power Supply 0 V (left one), Attenuator Unit upper potentiometer point 3 - Power Supply +15 V (left one),
-					  Attenuator Unit upper potentiometer point 2 - Servo Amplifier point 1, Servo Amplifier point (3-6, 4-5, 7-8).</li></br>
+					  <ul>
+					  <li><b>Note:</b> Example: connection point 1 - connection point 2 (drag the wire from connection point 1 by pressing left mouse button and release on connection point 2).</li>
+					  <li>Attenuator Unit upper potentiometer point 1 - Power Supply 0 V (left one).</li> 
+					  <li>Attenuator Unit upper potentiometer point 3 - Power Supply +15 V (left one)</li>
+					  <li>Attenuator Unit upper potentiometer point 2 - Servo Amplifier point 1</li>
+					  <li>Servo Amplifier point (3-6, 4-5, 7-8).</li>
+					  <li><b>Note:</b> Any wire connection can be deleted by clicking on the connected wire if required.</li>
+					  </ul></li></br>
   
-					  <li>Click on 'Check Connection' button to check whether the connection is proper or not. Click on the 'Power' switch in Power Supply box, the led will glow.</li><br/>
+					  <li><ul><li>Click on 'Check Connection' button to check whether the connection is proper or not.</li>
+					  <li>Click on the 'Power' switch in Power Supply box, the led will glow.</li></ul></li><br/>
 					 
-					 <li>Rotate the upper potentiometer knob in Attenuator Unit. Observe the tacho generator voltage in the black box above dc motor tacho unit
-					 plate. Rotate the knob untill the tacho generator voltage is about 1 V and motor starts rotating, observe the speed of the motor.</li><br/>
+					 <li><ul><li>Rotate the upper potentiometer knob in Attenuator Unit.</li>
+					 <li><b>Note:</b> To rotate any knob put the mouse cursor on the knob handle (blue line on the knob), a hand symbol will be showing. Press left mouse button, rotate clockwise to increase or anticlockwise to decrease values.</li>
+					 <li><b>Note:</b> If the desired value does not appear while rotating the knob in one attempt, try rotating it back and forth to reach the correct value.</li>
+					 <li>Observe the tacho generator voltage in the black box above dc motor tacho unit plate.</li>
+					 <li>Rotate the knob untill the tacho generator voltage is about 1 V and motor starts rotating, observe the speed of the motor.</li></ul></li><br/>
 
-					 <li>Now click on 'Show Table' button to get the observation data. Check output around 2, 3, 4 and 5 volts of tacho generator following steps 3-4 and click on 'Show Table' button
-					 each time after increasing the voltage.</li><br/>
+					 <li><ul><li>Now click on 'Show Table' button to get the observation data.</li>
+					 <li>Check output around 2, 3, 4 and 5 volts of tacho generator following steps 3-4 and click on 'Show Table' button
+					 each time after increasing the voltage.</li></ul></li><br/>
 					 
-					<li>Click on 'Plot' button to observe the plot 'Motor Speed (rpm) Vs. Tacho generator voltage (Volts)' and calculate the tacho generator constant (<span style="font-family:'Bodoni MT'"><i>k</i><sub>g</sub></span>)
-					from the slope in 'Motor Speed (rpm) Vs. Tacho generator voltage (Volts)' plot (explained in procedure section). Enter the value of <span style="font-family:'Bodoni MT'"><i>k</i><sub>g</sub></span> in corresponding box beside observation table.
-					Click on 'Download Plot' button to download the plot.
-					</li><br/> 
+					<li><ul><li>Click on 'Plot' button to observe the plot 'Motor Speed (rpm) Vs. Tacho generator voltage (Volts)'</li>
+					<li>Calculate the tacho generator constant (<span style="font-family:'Bodoni MT'"><i>k</i><sub>g</sub></span>)
+					from the slope in 'Motor Speed (rpm) Vs. Tacho generator voltage (Volts)' plot (as explained in procedure section)</li>
+					<li>Enter the value of <span style="font-family:'Bodoni MT'"><i>k</i><sub>g</sub></span> in corresponding box beside observation table.</li>
+					<li>Click on 'Download Plot' button to download the plot.</li></ul></li><br/> 
 					 
 					<li> Rotate the potentiometer knobs to its minimum value to stop the motor, switch off the power. Click on 'Clear' button</li><br/> 
 					 </ol>
@@ -174,35 +188,47 @@ background-color: #11B8C9;
 					
                       <li>First connect the circuit diagram properly through the connecting dots (black dots) according to the instructions below.<br/><br/>
 					  
-					  Attenuator Unit lower potentiometer point 4 - Op Amp Unit 0 V, Attenuator Unit lower potentiometer point 5 - Op Amp Unit point 2,					  
-					  Attenuator Unit lower potentiometer point 6 - Op Amp Unit -15 V, Op Amp Unit point 6 (upper one) - Servo Amplifier point 1,
-					  Servo Amplifier point (3-6, 4-5, 7-8), Op Amp Unit +15 V - Power Supply +15 V (left one), Op Amp Unit -15 V - Power Supply -15 V (left one),
-					  Op Amp Unit 0 V - Power Supply 0 V (left one), DC motor tacho unit lower point - Power Supply 0 V, DC motor tacho unit lower point - DC motor tacho unit point 2 (first one).
+					  <ul><li>Attenuator Unit lower potentiometer point 4 - Op Amp Unit 0 V</li>
+					  <li>Attenuator Unit lower potentiometer point 5 - Op Amp Unit point 2</li>					  
+					  <li>Attenuator Unit lower potentiometer point 6 - Op Amp Unit -15 V</li>
+					  <li>Op Amp Unit point 6 (upper one) - Servo Amplifier point 1</li>
+					  <li>Servo Amplifier point (3-6, 4-5, 7-8)</li>
+					  <li>Op Amp Unit +15 V - Power Supply +15 V (left one)</li>
+					  <li>Op Amp Unit -15 V - Power Supply -15 V (left one)</li>
+					  <li>Op Amp Unit 0 V - Power Supply 0 V (left one)</li>
+					  <li>DC motor tacho unit lower point - Power Supply 0 V</li>
+					  <li>DC motor tacho unit lower point - DC motor tacho unit point 2 (first one).</li></ul>
 					  
 					  </li></br>
   
-					  <li>Click on 'Check Connection' button to check whether the connection is proper or not. Click on the 'Power' switch in Power Supply box ,the led will glow.</li><br/>
+					  <li><ul><li>Click on 'Check Connection' button to check whether the connection is proper or not.</li>
+					  <li>Click on the 'Power' switch in Power Supply box, the led will glow.</li></ul></li><br/>
 					 
-					 <li>Rotate the lower potentiometer knob in Attenuator Unit. Observe the reference voltage, error voltage and Speed. 
-					 Rotate the knob untill the motor starts rotating at around 2000 rpm. Observe the tacho generator voltage in the black box above dc motor tacho unit plate.
-					 Click on 'Show Table' button to get the observation data.</li><br/>
+					 <li><ul><li>Rotate the lower potentiometer knob in Attenuator Unit. Observe the reference voltage, error voltage and Speed.</li> 
+					 <li>Rotate the knob untill the motor starts rotating at around 2000 rpm.</li>
+					 <li>Observe the tacho generator voltage in the black box above dc motor tacho unit plate.</li>
+					 <li>Click on 'Show Table' button to get the observation data.</li></ul></li><br/>
 					 
 					 
-					<li>Now click on the plus sign on 'Brake Change' to set the magnetic braking (loading) arrangement to point 2. Observe the change in speed and tacho generator voltage.</li><br/> 
+					<li><ul><li>Now click on the plus sign on 'Brake Change' to set the magnetic braking (loading) arrangement to point 2.</li>
+					<li>Observe the change in speed and tacho generator voltage.</li></ul></li><br/> 
 					 
 
-					 <li>Now click on 'Show Table' button to observe the observation table. Change brake position from 2-10 in step of 2 and check speed, tacho generator voltage 
-						following step 4 and click on 'Show Table' button each time after changing brake position.</li><br/>
+					 <li><ul><li>Now click on 'Show Table' button to observe the observation table.</li>
+					 <li>Change brake position from 2-10 in step of 2 and check speed, tacho generator voltage 
+						following step 4 and click on 'Show Table' button each time after changing brake position.</li></ul></li><br/>
 					 
-					<li>Now click on 'Plot' button to observe the plot 'Motor Speed (rpm) Vs. Braking Load (units)'. Click on 'Download Plot' button to download the plot.</li><br/>
+					<li><ul><li>Now click on 'Plot' button to observe the plot 'Motor Speed (rpm) Vs. Braking Load (units)'.</li>
+					<li>Click on 'Download Plot' button to download the plot.</li></ul></li><br/>
 
 					<li> Rotate the potentiometer knobs to its minimum value to stop the motor, switch off the power. Click on 'Clear' button.</li><br/>
 
-					<li> Now make the circuit connection following step 1 and connect the velocity error feedback (Op Amp Unit point 3 - DC motor tacho unit point 1 (first one)) for closed loop control
+					<li>Now make the circuit connection following step 1 and connect the velocity error feedback (Op Amp Unit point 3 - DC motor tacho unit point 1 (first one)) for closed loop control
 					and follow steps 2-6 again.</li><br/>
 					
-					 <li> Click on 'Pre amplifier Characteristics' button to observe the characteristics of the pre amplifier , click on 'Position Control' button to perform the experiment of 
-					 controlling the position of the motor rotor. To perform the experiment of controlling the speed of the motor click on 'Speed Control' button.</li><br/>
+					 <li><ul><li>Click on 'Pre amplifier Characteristics' button to observe the characteristics of the pre amplifier</li>
+					 <li>Click on 'Position Control' button to perform the experiment of controlling the position of the motor rotor.</li>
+					 <li>To perform the experiment of controlling the speed of the motor click on 'Speed Control' button.</li></ul></li><br/>
 					</ol>
 					<br><br>
 					 
@@ -223,17 +249,17 @@ background-color: #11B8C9;
 		<div class="col-md-5" >
 		<div class="img-container">		
 		<img class="img-fluid " id="servo" src="images/servo_amp.png " />
-		<div id="bd17"></div>
-		<div id="bd18"></div>
-		<div id="bd19"></div>
-		<div id="bd20"></div>
-		<div id="bd21"></div>
-		<div id="bd22"></div>
-		<div id="bd23"></div>
-		<div id="bd24"></div>
-		<div id="bd25"></div> 
-		<div id="bd26"></div>
-		<div id="bd27"></div>
+		<div id="bd17" name="Servo Amplifier point 1"></div>
+		<div id="bd18" name="Servo Amplifier point 2"></div>
+		<div id="bd19" name="Servo Amplifier +15 V"></div>
+		<div id="bd20" name="Servo Amplifier 0 V"></div>
+		<div id="bd21" name="Servo Amplifier -15 V"></div>
+		<div id="bd22" name="Servo Amplifier point 3"></div>
+		<div id="bd23" name="Servo Amplifier point 6"></div>
+		<div id="bd24" name="Servo Amplifier point 4"></div>
+		<div id="bd25" name="Servo Amplifier point 7"></div> 
+		<div id="bd26" name="Servo Amplifier point 5"></div>
+		<div id="bd27" name="Servo Amplifier point 8"></div>
 		<div id="bd28"></div>
 		</div>
 		<button type="button" id="tacho_olclSpeed"  class="btn btn-primary" onclick="part1_2_3()" >Speed Control</button>
@@ -248,14 +274,14 @@ background-color: #11B8C9;
 		<img class="img-fluid " id="ammeter" src="images/amp_pointer.jpg " />
 		<img class="img-fluid " id="powerled" src="images/groff.png " />
 		<img class="img-fluid " id="togsw" src="images/off.png " onclick="power_on()" />
-		<div id="bd29"></div>
-		<div id="bd30"></div>
-		<div id="bd31"></div>
+		<div id="bd29" name="Power Supply +15 V (left)"></div>
+		<div id="bd30" name="Power Supply 0 V (left)"></div>
+		<div id="bd31" name="Power Supply -15 V (left)"></div>
 		<div id="bd32"></div>
 		<div id="bd33"></div>
-		<div id="bd34"></div>
-		<div id="bd35"></div> 
-		<div id="bd36"></div>
+		<div id="bd34" name="Power Supply +15 V (right)"></div>
+		<div id="bd35" name="Power Supply 0 V (right)"></div> 
+		<div id="bd36" name="Power Supply -15 V (right)"></div>
 		<div id="bd37"></div>
 		</div>
 		<button type="button" id="check"  class="btn btn-primary " >Check Connection</button>
@@ -263,7 +289,7 @@ background-color: #11B8C9;
 		<button type="button" id="drawPlot"  class="btn btn-success " onclick="plot()" >Plot</button>
 		<button type="button" id="clear"  class="btn btn-danger " onclick="refresh()" >Clear</button>
 		
-		<input type="number" id="partchk" min="1" value="1" max="7" style="visibility:hidden;"><!--checks exp parts-->
+		<input type="number" id="partchk" min="0" value="0" max="7" style="visibility:hidden;"><!--checks exp parts-->
 		</div>		
 		
 		<div class="col-md-1"></div>
@@ -304,11 +330,11 @@ background-color: #11B8C9;
 		
 		
 		<div id="bd38"></div> 
-		<div id="bd39"></div>
-		<div id="bd40"></div>
-		<div id="bd41"></div>
-		<div id="bd42"></div>
-		<div id="bd43"></div>
+		<div id="bd39" name="DC motor tacho unit point 1 (1st)"></div>
+		<div id="bd40" name="DC motor tacho unit point 1 (2nd)"></div>
+		<div id="bd41" name="DC motor tacho unit point 2 (1st)"></div>
+		<div id="bd42" name="DC motor tacho unit point 2 (2nd)"></div>
+		<div id="bd43" name="DC motor tacho unit lower point"></div>
 		</div>	
 				
 		</div>
@@ -346,12 +372,12 @@ background-color: #11B8C9;
 		<input type="number" id="Au_down" min="0" value="0" max="10" step="1" style="position: absolute;width: 23%;height: 6%;top: 69%;left: 22%;text-align: center;background: transparent;border: none;"readOnly=readOnly>
 		
 		<!--Connection points in this circuit only-->
-		<div id="bd1"></div> 
-		<div id="bd2"></div>
-		<div id="bd3"></div>
-		<div id="bd4"></div>
-		<div id="bd5"></div>
-		<div id="bd6"></div> 
+		<div id="bd1" name="Attenuator Unit upper potentiometer point 1"></div> 
+		<div id="bd2" name="Attenuator Unit upper potentiometer point 2"></div>
+		<div id="bd3" name="Attenuator Unit upper potentiometer point 3"></div>
+		<div id="bd4" name="Attenuator Unit lower potentiometer point 4"></div>
+		<div id="bd5" name="Attenuator Unit lower potentiometer point 5"></div>
+		<div id="bd6" name="Attenuator Unit lower potentiometer point 6"></div> 
 		
 		
 		
@@ -365,16 +391,16 @@ background-color: #11B8C9;
 		<img class="img-fluid " id="OU" src="images/OpAmpUnit.png " />
 		<img class="img-fluid " id="feedbk_select" src="images/FEEDBACK_SELECTOR.png " />
 		
-		<div id="bd7"></div>
-		<div id="bd8"></div>
-		<div id="bd9"></div>
-		<div id="bd10"></div>
-		<div id="bd11"></div>
-		<div id="bd12"></div>
-		<div id="bd13"></div>
-		<div id="bd14"></div>
-		<div id="bd15"></div> 
-		<div id="bd16"></div>
+		<div id="bd7" name="Op Amp Unit point 1"></div>
+		<div id="bd8" name="Op Amp Unit point 2"></div>
+		<div id="bd9" name="Op Amp Unit point 3"></div>
+		<div id="bd10" name="Op Amp Unit +15 V"></div>
+		<div id="bd11" name="Op Amp Unit 0 V"></div>
+		<div id="bd12" name="Op Amp Unit -15 V"></div>
+		<div id="bd13" name="Op Amp Unit point 4"></div>
+		<div id="bd14" name="Op Amp Unit point 5"></div>
+		<div id="bd15" name="Op Amp Unit point 6 (upper)"></div> 
+		<div id="bd16" name="Op Amp Unit point 6 (lower)"></div>
 		
 		</div>						
 		</div>		
@@ -693,6 +719,14 @@ function onMouseMove2(event)
 
       main1();
 	  main2();
+	  
+	  ////CODE FOR ROBUSTNESS OF KNOB FUNCTIONS/////
+if (performance.navigation.type === 1) { // 1 = Reload
+      // Save a flag to indicate the redirect started
+      localStorage.setItem("redirectFromReload", "true");
+      // Redirect to a.html
+      window.location.href = "index.html";
+    }
 	  
 </script>
   <script src="./js/jsPlumb.js"></script>	
