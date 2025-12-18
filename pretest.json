@@ -1,0 +1,120 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Mark the wrong option. Which of the following cause and effect behaviour in speed control is correct when field resistance is increased.",
+      "answers": {
+        "a": "  Decrease in flux ",
+        "b": "Increase in armature current",
+        "c": "Increase in emf",
+        "d": "Decrease in speed"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Small dc motors have best speed control by _________",
+      "answers": {
+        "a": "Armature voltage control",
+        "b": "Tapped field control",
+        "c": "Rheostatic control method",
+        "d": "Field diverter method"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Consider the following statements regarding speed control of dc motor.<br/><br/> 1) Field control method is used to vary the speed of the motor above the rated speed. <br/> 2) Armature resistance control method is used to vary speed both below and above the rated speed.<br/>which one is correct?",
+      "answers": {
+        "a": "1 only",
+        "b": "1 and 2 both",
+        "c": "2 only",
+        "d": "None of the above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. In armature voltage control method or rheostatic control method for speed control in dc shunt motor, a variable resistance is ____",
+      "answers": {
+        "a": "Added in series with the armature",
+        "b": "Added in series with the field",
+        "c": "Connected across armature",
+        "d": "Both in series with armature and field"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. The most economical method of electrical braking is",
+      "answers": {
+        "a": "Plugging",
+        "b": "Dynamic braking with self exitation",
+        "c": "Regenerative braking",
+        "d": "None of the above"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "6. The torque constant (K<sub>m</sub>), of a permanent magnet dc motor is 0.25 V sec/radian and armature resistance is 2 &ohm;. If the applied armature voltage is 90 V, then its zero speed torque is",
+      "answers": {
+        "a": "10.45 N-m",
+        "b": "11.25 N-m",
+        "c": "13.65 N-m",
+        "d": "15.56 N-m"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },	
+	
+	
+	{
+      "question": "7. For a dc shunt motor if exitation is changed, then ____",
+      "answers": {
+        "a": "Torque will remain constant",
+        "b": "Torque will change but power will remain constant",
+        "c": "Torque and Power both will change",
+        "d": "All the torque,speed and power will change"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "8. What will happen if the back emf of a dc motor vanishes suddenly?",
+	  "answers": {
+        "a": "The motor will stop",
+        "b": "The motor will continue to run",
+		"c": "The armature may burn",
+        "d": "The motor will run noisy"		
+        
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "9. A 250 V dc series motor has armature and series-field resistances of 0.25 &ohm; and 0.15 &ohm; respectively. Calculate the current for developing a torque of 80 Nm at 1200 rpm.",
+      "answers": {
+        "a": "30 A",
+        "b": "43.2 A",
+        "c": "15 A",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },	
+	
+	{
+	 "question": "10. With the increase in temperature, the speed of series and shunt motor will ______, ______ respectively.",
+      "answers": {
+        "a": "Increase, Decrease",
+        "b": "Decrease, Increase",
+        "c": "Increase, Increase",
+        "d": "Decrease, Decrease,"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. A 230 V dc shunt machine has armature circuit resistance (including brushes) of 0.5 &ohm; and field circuit resistance of 115 &ohm;. If this machine is connected to 230 V supply mains, find the ratio of speed as a generator to the speed as a motor. The line current in each case is 40 A. ",
+      "answers": {
+        "a": "1.1896",
+        "b": "2.52",
+        "c": "3.354",
+        "d": "None of the above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. If a resistance is added in series with the field winding of dc shunt motor, then its ____",
+      "answers": {
+        "a": "Both speed and torque decreases",
+        "b": "Both speed and torque increases",
+        "c": "Speed decreases, torque increases",
+        "d": "Speed increases, torque decreases"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. The torque developed on a dc motor shaft is directly proportional to _______",
+      "answers": {
+        "a": "The field current and the armature voltage",
+        "b": "The armature voltage",
+        "c": "The field flux and the armature current",
+        "d": "None of the above"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. An important type of dc motor in which the commutation is done electronically is called _______",
+      "answers": {
+        "a": "Permanent magnet dc motor",
+        "b": "Brushless dc motor",
+        "c": "Ward-Leonard system",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. If the applied voltage to a dc motor is 220 V, then the back emf for maximum power developped is,",
+      "answers": {
+        "a": "220 V",
+        "b": "110 V",
+		    "c": "210 V",
+        "d": "440 V"
+        
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. A dc motor has 0.5 &ohm; resistance between its terminals. It runs at 730 rpm while taking 20 A from 300 V supply. Assume there is no saturation, what is the speed it will run when taking only 10 A from same supply",
+      "answers": {
+        "a": "365 rpm",
+        "b": "730 rpm",
+        "c": "1440 rpm",
+        "d": "1500 rpm"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. A 200 V dc generator supplies 4 kw at a terminal voltage of 200 V, the armature resistance being 0.5 &ohm;. If the machine is operated as a motor at the same terminal voltage with the same terminal current, find the ratio of the generator speed N<sub>g</sub> to the motor speed N<sub>m</sub>. ",
+      "answers": {
+        "a": "1.25",
+        "b": "1.105",
+        "c": "0.905",
+        "d": "0.833"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "8. A 50 kw dc shunt motor is loaded to draw rated armature current at any given speed. When driven at 1.5 times the rated speed by field control, the output power delivered by the motor is approximately ",
+      "answers": {
+        "a": "75 kw",
+        "b": "100 kw",
+        "c": "50 kw",
+        "d": "33 kw"
+        
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }, 
+    
+	{
+      "question": "9. A dc shunt motor runs at 750 rpm from 250 V supply and is taking a full-load line current of 60 amperes. Its armature and field resistances are 0.4 &ohm; and 125 &ohm; respectively. Assuming 2 V brush drop and negligible armature reaction effect, calculate the no-load speed for a no-load line current of 6 amperes",
+	  "answers": {
+        "a": "75 rpm",
+        "b": "652 rpm",
+        "c": "822 rpm",
+        "d": "none of the above"
+        
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "10. In which method of speed control, the dc motor acts as constant torque, variable power drive?",
+      "answers": {
+        "a": "Armature resistance control",
+        "b": "Field control",
+        "c": "Ward Leonard control",
+        "d": "Flux control method"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}
