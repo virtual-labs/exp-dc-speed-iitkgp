@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en"><!--html tag start-->
 <head>
-    <title>Study and operation of the DC Speed / Position control set up</title>
+    <title>Study and Operation of the DC Speed and Position Control Setup</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,9 +32,9 @@
  
  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+<!-- <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script> -->
 
-
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <link rel="stylesheet" href="./css/preamp.css">
 <link rel="stylesheet" href="./css/demo.css">
@@ -42,39 +42,33 @@
 
 
   <style>
-	.bluedot{
-	position:absolute;
-    border: 2px solid #0C0C0C;
+	.dial {
+	
+position:absolute;
+    border: 2px solid #060808;
     border-radius:50%;
-    background-color:#0C0C0C;
-    background-image:linear-gradient(90deg,#0C0C0C,#00ccff);
-	box-shadow: 5px 5px 8px #888888;
-	}
-	.handlep{
-	position:absolute;
-    border: 2px solid blue;
-    border-radius:50%;
-    background-color:white;
-    background-image:url(./images/plus.png);
-	background-size:cover;
-	background-position:center;
+    background-color:#060808;
+    background-image:linear-gradient(90deg,#060808,#3A3B3B);
 	
-	}
+	box-shadow: 5px 5px 8px #D9DBDB;
+}
+
+.dialhandle {
 	
-	.handlen{
-	position:absolute;
-    border: 2px solid blue;
-    border-radius:50%;
-    background-color:white;
-    background-image:url(./images/minus.jpg);
-	background-size:cover;
-	background-position:center;
-	
-	}
-	
-	
-	
-	
+position:absolute;
+cursor:pointer;
+background-color: #11B8C9;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow:  0 0 20px #fff, 0 0 30px #0867DF;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #023474;
+  }
+}
 	
   </style>
   
@@ -108,87 +102,68 @@
             </div><!--3rd col under 2nd row end-->
         </div><!--2nd row under 1st container end-->
         <hr>
-        <!--<div class="d-flex p-1 text-primary"><!--3rd row under 1st container start--
-          <div class="p-1" > <p class="h4"><a href="../index.html"> <span class="LN"> <b> Control and Instrumentation Lab </b></span> -- </a></p></div>
-          <div class="p-1"> <p class="h4"><a href="./index.html"> <span class="ExpN"> <b> Study and operation of the DC Speed / Position control set up </b> </span> </a></p></div>
-        </div>!--3rd row under 1st container end-->
+        
     </div><!--First Container under body tag end-->
     
-    <!--<div class="container p-3 my-5 text-primary text-center border">!--2nd Container under body tag start--
-        <div class="row"><!--First row under 2nd container start--
-
-            <ul class="nav nav-pills nav-justified">
-                <li class="nav-item">
-                  <a class="nav-link" href="../index.html">Introduction</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../aim.html">Objective</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../prequiz.html">Pre Quiz</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../theory.html">Theory</a>
-                </li>
-				<li class="nav-item">
-                  <a class="nav-link" href="../procedure.html">Procedure</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="./index.html">Simulation</a>
-                  </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../postquiz.html">Post Quiz</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../feedback.html">Feedback</a>
-                  </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../references.html">References</a>
-                  </li>
-
-              </ul>
-        </div>!--First row under 2nd container end--
-    </div>!--2nd Container under body tag end-->
 	
     <div class="container p-3 my-5 text-left border"><!--3rd Container under body tag start-->
       <div class="row"><!--First row under 3rd container start-->
         <div class="col-md-1"></div><!--First col under 3rd container start& end-->
         <div class="col-md-10"><!--2nd col under 3rd container start-->
             <p class="text-center bg-success"> <a class="nav-link" data-bs-toggle="tab"  id="instcontrol" style="background-color:#128BD9"  ><span class=" h3 text-dark"> Instructions </span></a>
-              <div id="inst" style="display:block;height:200px;overflow-y:auto;">
+              <div id="inst" style="display:block;height:200px;overflow-y:auto;text-align:justify">
 					<ol>
-					<span style="color:blue">Pre amplifier Characteristics</span><br/>
+					<b>Pre Amplifier Characteristics</b><br/>
 					
-                      <li>At first connect the circuit diagram properly through the connecting dots(black dots)according to below instruction.<br/>
-					  Attenuator unit upper potentiometer point 1-lower potentiometer point 4,Attenuator unit upper potentiometer point 2-lower potentiometer point 6,
-					  Attenuator unit upper potentiometer point 3-Pre amplifier unit +15v, Attenuator unit upper potentiometer point 1-Pre amplifier unit 0v,
-					  Attenuator unit lower potentiometer point 5-Pre amplifier unit point 1, Power Supply +15v - pre amplifier unit +15v, Power Supply -15v - pre amplifier unit -15v,
-					  Power Supply 0v - pre amplifier unit 0v					  
+                       <li>First connect the circuit diagram properly through the connecting dots (black dots) according to the instructions below.<br/><br/>
+					  
+					  <ul>
+					  <li><b>Note:</b> Example: connection point 1 - connection point 2 (drag the wire from connection point 1 by pressing left mouse button and release on connection point 2).</li>
+					  <li>Attenuator Unit upper potentiometer point 1 - lower potentiometer point 4</li>
+					  <li>Attenuator Unit upper potentiometer point 2 - lower potentiometer point 6</li>
+					  <li>Attenuator Unit upper potentiometer point 3 - Pre Amplifier Unit +15 V</li>
+					  <li>Attenuator Unit upper potentiometer point 1 - Pre Amplifier Unit 0 V</li>
+					  <li>Attenuator Unit lower potentiometer point 5 - Pre Amplifier Unit point 1</li>
+					  <li>Power Supply +15 V (left one) - Pre Amplifier Unit +15 V</li>
+					  <li>Power Supply -15 V (left one) - Pre Amplifier Unit -15 V</li>
+					  <li>Power Supply 0 V (left one) - Pre Amplifier Unit 0 V</li>
+					  <li><b>Note:</b> Any wire connection can be deleted by clicking on the connected wire if required.</li>
+					  </ul>					  
 					  </li></br>
   
-					  <li>Click on 'Check Connection' button to check whether the connection is proper or not.Then click on the 'Power' switch in Power Supply box ,the led will glow.</li><br/>
+					  <li><ul><li>Click on 'Check Connection' button to check whether the connection is proper or not.</li>
+					  <li>Then click on the 'Power' switch in Power Supply box, the led will glow.</li></ul></li><br/>
 					 
-					 <li>Rotate the lower potentiometer knob in Attenuator Unit by clicking on the plus sign on it.Observe the input voltage in the black box above.
-					 Rotate the knob untill the voltage is about +1.5v ,the pre amplifier outputs V<sub>o</sub>(3)and V<sub>o</sub>(4)are shown in respective boxes.</li><br/>
+					 <li><ul><li>Rotate the lower potentiometer knob in Attenuator Unit. Observe the input voltage in the black box above.</li>
+					 <li><b>Note:</b> To rotate any knob put the mouse cursor on the knob handle (blue line on the knob), a hand symbol will be showing. Press left mouse button, rotate clockwise to increase or anticlockwise to decrease values.</li>
+					 <li><b>Note:</b> If the desired value does not appear while rotating the knob in one attempt, try rotating it back and forth to reach the correct value. If the knob becomes unresponsive at any time, please refresh the page and repeat the experiment.</li>
+					 <li>Rotate the knob untill the voltage is about +1.5 V, the Pre Amplifier outputs V<sub>o</sub>(3) and V<sub>o</sub>(4) are shown in respective boxes.</li></ul></li><br/>
 
-					 <li>Now click on 'Show Table' button to observe the observation table.Click on minus sign on the lower potentiometer knob to decrease the input voltage upto 0 value.
-					 and click on 'Show Table' button each time after changing the voltage.</li><br/>
+					 <li><ul><li>Click on 'Show Table' button to get the observation data.</li>
+					 <li>Rotate the lower potentiometer knob anti clockwise to decrease the input voltage upto 0 value.</li>
+					 <li>Click on 'Show Table' button each time after decreasing the voltage in 0.1 V step.</li></ul></li><br/>
 					 
-					 <li>Now change the connection to apply -15v as supply voltage.This can be achieved by Deleting the connection Attenuator unit upper potentiometer point 3-Pre amplifier unit +15v by clicking on the wire
-					 and connecting Attenuator unit upper potentiometer point 3-Pre amplifier unit -15v.Click on 'Check Connection' button to make sure that proper connection has been done.</li><br/>
+					 <li><ul><li>Now change the connection to apply -15 V as supply voltage.</li>
+					 <li>This can be achieved by deleting the connection Attenuator Unit upper potentiometer point 3 - Pre Amplifier Unit +15 V by clicking on the 
+					 connected wire and connecting Attenuator Unit upper potentiometer point 3 - Pre Amplifier Unit -15 V.</li>
+					 <li>Click on 'Check Connection' button to make sure that proper connection has been done.</li></ul></li><br/>
 					 
-					 <li>Now Rotate the lower potentiometer knob in Attenuator Unit by clicking on the plus sign on it.Observe the input voltage in the black box above.
-					 Rotate the knob to increase the voltage in -0.1v step untill -1.5v ,the pre amplifier outputs V<sub>o</sub>(3)and V<sub>o</sub>(4)are shown in respective boxes.
-					 Click on 'Show Table' button each time after changing the voltage.</li><br/>
+					 <li><ul><li>Now Rotate the lower potentiometer knob in Attenuator Unit in clockwise direction.</li>
+					 <li>Observe the input voltage in the black box above.</li>
+					 <li>Rotate the knob to increase the voltage in -0.1 V step untill -1.5 V, the Pre Amplifier outputs V<sub>o</sub>(3) and V<sub>o</sub>(4) are shown in respective boxes.</li>
+					 <li>Click on 'Show Table' button each time after increasing the voltage.</li></ul></li><br/>
 					 
 					 
-					<li>After the above procedure is complete for +1.5v to -1.5v input voltage, click on 'Plot' button to observe the plot 
-					'Pre amplifier output voltages(V<sub>o</sub>(3)and V<sub>o</sub>(4))(volts) vs. Input voltage(V<sub>i</sub>)'.</li><br/> 
+					<li><ul><li>After the total procedure (steps 3-6) is complete for +1.5 V to -1.5 V input voltage</li>
+					<li>Click on 'Plot' button to observe the plot 'Pre Amplifier output voltages (V<sub>o</sub>(3) and V<sub>o</sub>(4)) (Volts) Vs. Input voltage (V<sub>i</sub>) (Volts)'.</li>
+					<li>Hover on the plot section, click on the camera icon to download the plot.</li></ul>
+					</li><br/> 
 					 
-					<li> Rotate the potentiometer knob to its minimum value ,switch off the power.Click on 'Clear' button.</li><br/>
+					<li> Rotate the potentiometer knob to its minimum value ,switch off the power. Click on 'Clear' button.</li><br/>
 
-					<li> click on 'Position Control' button to perform the experiment of controlling the position of the motor rotor.Click on 'Pre amplifier Characteristics' button to
-					observe the characteristics of the pre amplifier , To perform the experiment of controlling the speed of the motor click on 'Speed Control' button.</li><br/>
+					<li><ul><li>Click on 'Position Control' button to perform the experiment of controlling the position of the motor rotor.</li>
+					<li>Click on 'Pre Amplifier Characteristics' button to observe the characteristics of the Pre Amplifier.</li>
+					<li>To perform the experiment of controlling the speed of the motor click on 'Speed Control' button.</li></ul></li><br/>
 					
 					 </ol>
 					<br><br>
@@ -211,14 +186,14 @@
 		<img class="img-fluid " id="ammeter" src="images/amp_pointer.jpg " />
 		<img class="img-fluid " id="powerled" src="images/groff.png " />
 		<img class="img-fluid " id="togsw" src="images/off.png " onclick="power_on()" />
-		<div id="bd7"></div>
-		<div id="bd8"></div>
-		<div id="bd9"></div>
+		<div id="bd7" name="Power Supply +15 V (left)"></div>
+		<div id="bd8" name="Power Supply 0 V (left)"></div>
+		<div id="bd9" name="Power Supply -15 V (left)"></div>
 		<div id="bd10"></div>
 		<div id="bd11"></div>
-		<div id="bd12"></div>
-		<div id="bd13"></div> 
-		<div id="bd14"></div>
+		<div id="bd12" name="Power Supply +15 V (right)"></div>
+		<div id="bd13" name="Power Supply 0 V (right)"></div> 
+		<div id="bd14" name="Power Supply -15 V (right)"></div>
 		<div id="bd15"></div>
 		</div>
 		
@@ -227,7 +202,7 @@
 		<div class="col-md-6" >
 		
 		<button type="button" id="tacho_olclSpeed"  class="btn btn-primary" onclick="part1_2_3()" >Speed Control</button>
-		<button type="button" id="preAmp_Char"  class="btn btn-primary" onclick="part4_5()" >Pre amplifier Characteristics</button>
+		<button type="button" id="preAmp_Char"  class="btn btn-primary" onclick="part4_5()" >Pre Amplifier Characteristics</button>
 		<button type="button" id="PositionC"  class="btn btn-primary " onclick="part6_7()" >Position Control</button>	
 		<br/><br/>
 		<button type="button" id="check"  class="btn btn-primary " >Check Connection</button>
@@ -245,31 +220,37 @@
 		<div class="col-md-5" >
 		<div class="img-container">
 		
-		<input type="number" id="IV" min="-1.5" max="1.5" step="0.1" value="0" readOnly=readOnly><span style="color:blue;font-weight:bold;position:absolute;top:-12%;left:11%">Input voltage(V)</span>
+		<input type="number" id="IV" min="-1.5" max="1.5" step="0.1" value="0" readOnly=readOnly><span style="color:blue;font-weight:bold;position:absolute;top:-12%;left:11%">Input voltage (V)</span>
 		
 		
 		<img class="img-fluid " id="AU" src="images/AU.png " />
 		<!---knob 1 1st col 1st row--------->
-		<div class="bluedot" id="knob1" style=" width:21.5%;height:18.5%;top:13%;left:18.5%;pointer-events:none;">
+		<!-- <div class="bluedot" id="knob1" style=" width:21.5%;height:18.5%;top:13%;left:18.5%;pointer-events:none;">
 		<div class="handlep" id="knob1p" onclick="rotate1()"style="width:30%;height:30%;top:33%;left:0%;"></div>
 		<div class="handlen" id="knob1n"onclick="rotate2())" style="width:30%;height:30%;top:33%;left:70%;"></div>
+		</div> -->
+		<div id="knob1" class="dial"  style=" width:21.5%;height:18.5%;top:13%;left:18.5%;pointer-events:auto;">
+		<div class="dialhandle" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
 		</div>
 		<input type="number" id="Au_up" min="0" value="0" max="10" step="0.1" style="position: absolute;width: 18%;height: 6%;top: 30%;left: 22%;text-align: center;background: transparent;border: none;"readOnly=readOnly>
 		
 		<!---knob 2 1st col 1st row--------->
-		<div class="bluedot" id="knob2" style=" width:22.4%;height:19%;top:51.5%;left:20.7%;pointer-events:none;">
+		<!-- <div class="bluedot" id="knob2" style=" width:22.4%;height:19%;top:51.5%;left:20.7%;pointer-events:none;">
 		<div class="handlep" id="knob2p" onclick="rotate3();preAmp_Char()"style="width:30%;height:30%;top:33%;left:0%;"></div>
 		<div class="handlen" id="knob2n"onclick="rotate4();preAmp_Char()" style="width:30%;height:30%;top:33%;left:70%;"></div>
+		</div> -->
+		<div id="knob2" class="dial"  style="width:22.4%;height:19%;top:51.5%;left:20.7%;pointer-events:auto;">
+		<div class="dialhandle" style="width:20%;height:5%;top:85%;left:20%;transform:rotate(304deg)"></div>				
 		</div>
 		<input type="number" id="Au_down" min="0" value="0" max="10.5" step="0.7" style="position: absolute;width: 23%;height: 6%;top: 69%;left: 22%;text-align: center;background: transparent;border: none;"readOnly=readOnly>
 		
 		<!--Connection points in this circuit only-->
-		<div id="bd1"></div> 
-		<div id="bd2"></div>
-		<div id="bd3"></div>
-		<div id="bd4"></div>
-		<div id="bd5"></div>
-		<div id="bd6"></div> 		
+		<div id="bd1" name="Attenuator Unit upper potentiometer point 1"></div> 
+		<div id="bd2" name="Attenuator Unit upper potentiometer point 2"></div>
+		<div id="bd3" name="Attenuator Unit upper potentiometer point 3"></div>
+		<div id="bd4" name="Attenuator Unit lower potentiometer point 4"></div>
+		<div id="bd5" name="Attenuator Unit lower potentiometer point 5"></div>
+		<div id="bd6" name="Attenuator Unit lower potentiometer point 6"></div> 		
 		
 		</div>	
 		</div>
@@ -278,16 +259,16 @@
 		<div class="img-container" >
 		<img class="img-fluid " id="preAmp" src="images/pre_amp.png "/>
 		<img class="img-fluid " id="togsw2" src="images/off.png " onclick="preAmp_on()" />
-		<input type="number" id="V03"  value="0" readOnly=readOnly><span style="color:blue;font-weight:bold;position:absolute;top:-12%;left:13%">V<sub>o</sub>(3)(V)</span>
-		<input type="number" id="V04"  value="0" readOnly=readOnly><span style="color:blue;font-weight:bold;position:absolute;top:-12%;left:62%">V<sub>o</sub>(4)(V)</span>
-		<div id="bd16"></div> 
-		<div id="bd17"></div>
-		<div id="bd18"></div>
-		<div id="bd19"></div>
-		<div id="bd20"></div>
-		<div id="bd21"></div>
-		<div id="bd22"></div>
-		<div id="bd23"></div>
+		<input type="number" id="V03"  value="0" readOnly=readOnly><span style="color:blue;font-weight:bold;position:absolute;top:-12%;left:13%">V<sub>o</sub>(3) (V)</span>
+		<input type="number" id="V04"  value="0" readOnly=readOnly><span style="color:blue;font-weight:bold;position:absolute;top:-12%;left:62%">V<sub>o</sub>(4) (V)</span>
+		<div id="bd16" name="Pre Amplifier Unit +15 V"></div> 
+		<div id="bd17" name="Pre Amplifier Unit 0 V"></div>
+		<div id="bd18" name="Pre Amplifier Unit -15 V"></div>
+		<div id="bd19" name="Pre Amplifier Unit point 3"></div>
+		<div id="bd20" name="Pre Amplifier Unit point 4"></div>
+		<div id="bd21" name="Pre Amplifier Unit point 2"></div>
+		<div id="bd22" name="Pre Amplifier Unit point 1"></div>
+		<div id="bd23" name="Pre Amplifier Unit point 5"></div>
 		</div>
 		</div>
 		
@@ -307,7 +288,7 @@
 				  <tr>
 					<th>Sl No.</th>
 					<th>input voltage(V<sub>i</sub>)(Volts)</th> 
-					<th colspan ="3">Pre amplifier Output</th>
+					<th colspan ="3">Pre Amplifier Output (Volts)</th>
 				</tr>
 				<tr>
 					<th></th>
@@ -323,7 +304,7 @@
 		</div>
 		<div class="col-md-4 "><!--1st col under 4th row start -->	
 		
-		<!--<span id="part3_result" style="display:none;color:blue;font-weight:bold">Pre amplifier Constant = 10.66 </span>-->
+		<!--<span id="part3_result" style="display:none;color:blue;font-weight:bold">Pre Amplifier Constant = 10.66 </span>-->
 			
 		</div>
 			
@@ -334,13 +315,12 @@
 		
 	 
 			<div class="col-md-12">
-				<div id = "plotbucket" class="content-center" style="display:none; position:relative; border:3px solid white;height:530px;width:823px ">
+				<!-- <div id = "plotbucket" class="content-center" style="display:none; position:relative; border:3px solid white;height:530px;width:823px ">
 				<button type="button" id="exportChart" class="btn btn-primary"  style="display:none;position:absolute;left:9%;">Download Plot</button>
 				<button type="button" id="result" class="btn btn-primary" onclick="refresh()"  style="display:none;position:absolute;left:27%">OK</button><br/><br/>
 					<div id="chartContainer"  style="display:none; position:absolute; height: 80%; width: 100%;z-index:1 "></div>
-					
-					
-				</div>
+				</div> -->
+				<div align="center" id="myPlot" style="width:100%;max-width:800px;padding-left:10%"></div>
 				
 			</div>
 			
@@ -369,7 +349,214 @@
         </footer>
       </div>
   </div><!--Last and fifth container under body tag end-->
-  
+  <script>
+
+var knobPositionX;
+      var knobPositionY;
+      var mouseX;
+      var mouseY;
+      var knobCenterX;
+      var knobCenterY;
+      var adjacentSide;
+      var oppositeSide;
+      var currentRadiansAngle;
+      var getRadiansInDegrees;
+      var finalAngleInDegrees;
+      var volumeSetting;
+      //var tickHighlightPosition;
+      //var audio = new Audio("https://www.cineblueone.com/maskWall/audio/skylar.mp3"); //Celine Dion's "Ashes"
+      //var startingTickAngle = -135;
+      //var tickContainer = document.getElementById("tickContainer");
+      var knob1 = document.getElementById("knob1");
+	  var knob2 = document.getElementById("knob2");
+	  
+      var boundingRectangle1 = knob1.getBoundingClientRect(); //get rectangular geometric data of knob (x, y, width, height)
+	  var boundingRectangle2 = knob2.getBoundingClientRect();
+	 
+      function main1()
+      {
+          knob1.addEventListener(getMouseDown(), onMouseDown1); //listen for mouse button click
+          document.addEventListener(getMouseUp(), onMouseUp1); //listen for mouse button release
+	  }
+	  function main2()
+      {
+          knob2.addEventListener(getMouseDown(), onMouseDown2); //listen for mouse button click
+          document.addEventListener(getMouseUp(), onMouseUp2); //listen for mouse button release
+	  }
+	  
+      //on mouse buttons down
+      function onMouseDown1()
+      {
+	  document.addEventListener(getMouseMove(), onMouseMove1); //start drag
+      }	  
+	  function onMouseDown2()
+      {
+	  document.addEventListener(getMouseMove(), onMouseMove2); //start drag
+      }
+	  
+      //on mouse buttons release
+      function onMouseUp1()
+      {
+          document.removeEventListener(getMouseMove(), onMouseMove1); //stop drag
+      }
+	  function onMouseUp2()
+      {
+          document.removeEventListener(getMouseMove(), onMouseMove2); //stop drag
+      }
+	  
+      //compute mouse angle relative to center of volume knob
+      //For clarification, see my basic trig explanation at:
+      //https://www.quora.com/What-is-the-significance-of-the-number-pi-to-the-universe/answer/Kevin-Lam-15
+      function onMouseMove1(event)
+      {	  
+          knobPositionX = boundingRectangle1.left; //get knob's global x position
+          knobPositionY = boundingRectangle1.top; //get knob's global y position
+
+          if(detectMobile() == "desktop")
+          {
+              mouseX = event.pageX; //get mouse's x global position
+              mouseY = event.pageY; //get mouse's y global position
+          } else {
+              mouseX = event.touches[0].pageX; //get finger's x global position
+              mouseY = event.touches[0].pageY; //get finger's y global position
+          }
+
+          knobCenterX = boundingRectangle1.width / 2 + knobPositionX; //get global horizontal center position of knob relative to mouse position
+          knobCenterY = boundingRectangle1.height / 2 + knobPositionY; //get global vertical center position of knob relative to mouse position
+
+          adjacentSide = knobCenterX - mouseX; //compute adjacent value of imaginary right angle triangle
+          oppositeSide = knobCenterY - mouseY; //compute opposite value of imaginary right angle triangle
+
+          //arc-tangent function returns circular angle in radians
+          //use atan2() instead of atan() because atan() returns only 180 degree max (PI radians) but atan2() returns four quadrant's 360 degree max (2PI radians)
+          currentRadiansAngle = Math.atan2(adjacentSide, oppositeSide);
+
+          getRadiansInDegrees = currentRadiansAngle * 180 / Math.PI; //convert radians into degrees
+
+          finalAngleInDegrees = -(getRadiansInDegrees - 135); //knob is already starting at -135 degrees due to visual design so 135 degrees needs to be subtracted to compensate for the angle offset, negative value represents clockwise direction
+
+          //only allow rotate if greater than zero degrees or lesser than 270 degrees
+          if(finalAngleInDegrees >= 0 && finalAngleInDegrees <= 300)
+          {
+              knob1.style.transform = "rotate(" + finalAngleInDegrees + "deg)"; //use dynamic CSS transform to rotate volume knob
+
+              //270 degrees maximum freedom of rotation / 100% volume = 1% of volume difference per 2.7 degrees of rotation
+              volumeSetting = Math.round(finalAngleInDegrees / (300 / 100));
+              var voltValue = volumeSetting * (10/100); 
+              document.getElementById("Au_up").value = math.round(voltValue) ;//+ "%"; //update volume text
+          }
+      }
+
+///knob2/////
+function onMouseMove2(event)
+      {
+          knobPositionX = boundingRectangle2.left; //get knob's global x position
+          knobPositionY = boundingRectangle2.top; //get knob's global y position
+
+          if(detectMobile() == "desktop")
+          {
+              mouseX = event.pageX; //get mouse's x global position
+              mouseY = event.pageY; //get mouse's y global position
+          } else {
+              mouseX = event.touches[0].pageX; //get finger's x global position
+              mouseY = event.touches[0].pageY; //get finger's y global position
+          }
+
+          knobCenterX = boundingRectangle2.width / 2 + knobPositionX; //get global horizontal center position of knob relative to mouse position
+          knobCenterY = boundingRectangle2.height / 2 + knobPositionY; //get global vertical center position of knob relative to mouse position
+
+          adjacentSide = knobCenterX - mouseX; //compute adjacent value of imaginary right angle triangle
+          oppositeSide = knobCenterY - mouseY; //compute opposite value of imaginary right angle triangle
+
+          //arc-tangent function returns circular angle in radians
+          //use atan2() instead of atan() because atan() returns only 180 degree max (PI radians) but atan2() returns four quadrant's 360 degree max (2PI radians)
+          currentRadiansAngle = Math.atan2(adjacentSide, oppositeSide);
+
+          getRadiansInDegrees = currentRadiansAngle * 180 / Math.PI; //convert radians into degrees
+
+          finalAngleInDegrees = -(getRadiansInDegrees - 135); //knob is already starting at -135 degrees due to visual design so 135 degrees needs to be subtracted to compensate for the angle offset, negative value represents clockwise direction
+
+          //only allow rotate if greater than zero degrees or lesser than 270 degrees
+          if(finalAngleInDegrees >= 0 && finalAngleInDegrees <= 300)
+          {
+              knob2.style.transform = "rotate(" + finalAngleInDegrees + "deg)"; //use dynamic CSS transform to rotate volume knob
+
+              //270 degrees maximum freedom of rotation / 100% volume = 1% of volume difference per 2.7 degrees of rotation
+              volumeSetting = Math.floor(finalAngleInDegrees / (300 / 100));
+				var voltValue = volumeSetting * (10/100); 
+				var pmv = volumeSetting * (1.6/100); 
+              document.getElementById("Au_down").value = math.round(voltValue);
+			  
+			  if(document.getElementById('partchk').value == 4){
+					document.getElementById('IV').value = math.floor(pmv*10)/10;
+					preAmp_Char();
+					}
+					
+					if(document.getElementById('partchk').value == 5){
+					document.getElementById('IV').value = -math.floor(pmv*10)/10;
+					preAmp_Char();
+					}
+              
+             // document.getElementById("volumeValue").innerHTML = volumeSetting + "%"; //update volume text
+          }
+      }
+	  
+	  
+      //detect for mobile devices from https://www.sitepoint.com/navigator-useragent-mobiles-including-ipad/
+      function detectMobile()
+      {
+          var result = (navigator.userAgent.match(/(iphone)|(ipod)|(ipad)|(android)|(blackberry)|(windows phone)|(symbian)/i));
+
+          if(result !== null)
+          {
+              return "mobile";
+          } else {
+              return "desktop";
+          }
+      }
+
+      function getMouseDown()
+      {
+          if(detectMobile() == "desktop")
+          {
+              return "mousedown";
+          } else {
+              return "touchstart";
+          }
+      }
+
+      function getMouseUp()
+      {
+          if(detectMobile() == "desktop")
+          {
+              return "mouseup";
+          } else {
+              return "touchend";
+          }
+      }
+
+      function getMouseMove()
+      {
+          if(detectMobile() == "desktop")
+          {
+              return "mousemove";
+          } else {
+              return "touchmove";
+          }
+      }
+
+      main1();
+	  main2();
+	  
+	  ////CODE FOR ROBUSTNESS OF KNOB FUNCTIONS/////
+if (performance.navigation.type === 1) { // 1 = Reload
+      // Save a flag to indicate the redirect started
+      localStorage.setItem("redirectFromReload", "true");
+      // Redirect to a.html
+      window.location.href = "index_preAmp.html";
+    }
+	  
+</script>
   <script src="./js/jsPlumb.js"></script>	
 	<script src="./js/demo_preamp.js"> </script> 
 	 

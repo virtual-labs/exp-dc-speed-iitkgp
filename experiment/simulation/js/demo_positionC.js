@@ -74,7 +74,7 @@ jsPlumb.ready(function () {
 					///black wire
 	endpoint_ground = {
             anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 5, stroke: "black" },
+            connectorStyle: { strokeWidth: 4, stroke: "black" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 10,
@@ -90,7 +90,7 @@ jsPlumb.ready(function () {
 					
 			endpoint_blue = {
             anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 10, stroke: "#55DEF6" },
+            connectorStyle: { strokeWidth: 4, stroke: "#55DEF6" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 10,
@@ -194,15 +194,38 @@ jsPlumb.ready(function () {
 			
 			
              instance.connect({ source: e28, target: e38 });
-			 //instance.connect({ source: e1, target: e13 });
-			// instance.connect({ source: e2, target: e14 });
 			 
+			 e28.canvas.style.pointerEvents = "none";///disable first
+			 e28.setEnabled(false);///stop the reconnection
+			e38.canvas.style.pointerEvents = "none";///disable first
+			 e38.setEnabled(false);///stop the reconnection
+			 e55.canvas.style.pointerEvents = "none";///disable first
+			 e55.setEnabled(false);///stop the reconnection
+			 e32.canvas.style.pointerEvents = "none";///disable first
+			 e32.setEnabled(false);///stop the reconnection
+			e33.canvas.style.pointerEvents = "none";///disable first
+			 e33.setEnabled(false);///stop the reconnection
+			e37.canvas.style.pointerEvents = "none";///disable first
+			 e37.setEnabled(false);///stop the reconnection
+			 
+			 
+			 var name1, name2;
 			 //delete clicked connection
       instance.bind("click", function (conn, originalEvent) {
-		  
-           if ( confirm("Delete connection from " + conn.sourceId + " to " + conn.targetId + "?")) {////for clicking on a connection
+		if((conn.sourceId!='bd28' && conn.targetId!='bd38')){  
+          ///NEW ADDED FOR LOOP TO DISPLAY ENDPOINT NAMES DURING DELETE CONNECTION
+		 for(var cpoint =1; cpoint<=56; cpoint++){
+			 if(conn.sourceId=='bd'+cpoint){
+				 name1 = document.getElementById(conn.sourceId).getAttribute("name");
+			 }
+			 if(conn.targetId=='bd'+cpoint){ 
+		  name2= document.getElementById(conn.targetId).getAttribute("name");
+		 }
+		 } 
+           if ( confirm('Delete connection from'+' ' + name1 +' '+ 'to' + ' '+ name2 + '?')) {////for clicking on a connection
                instance.deleteConnection(conn);			  
 			         }
+		}
        }); 
 		
   
@@ -1065,7 +1088,7 @@ jsPlumb.ready(function () {
 		 if (is_connected_18_48 && is_connected_17_47 && is_connected_19_10 && is_connected_11_20 && is_connected_21_12 && is_connected_29_44 && is_connected_45_30 && is_connected_46_31 && is_connected_34_39 && is_connected_36_40 && is_connected_52_12 && is_connected_54_10 && is_connected_56_7 && is_connected_41_8 && is_connected_2_50 && is_connected_1_45 && is_connected_3_16 && is_connected_28_38 && is_connected_22_23 && is_connected_24_26  && is_connected_25_27   &&  !unallowed_connection_present ) {
 			            
 			document.getElementById('partchk').value = 6;
-			alert('Right Connection\n Part-6 position control');
+			alert('Right Connection\n Part-5 position control');
 			document.getElementById('myTable4').style.visibility = "visible";
 			}
 		/*else if (is_connected_4_11 && is_connected_5_8 && is_connected_6_12 && is_connected_9_39 && is_connected_15_17 && is_connected_10_29 && is_connected_30_11 && is_connected_12_31 && is_connected_41_43 && is_connected_43_30 && is_connected_28_38 && !is_connected_1_30 && !is_connected_3_29 && !is_connected_2_17 && is_connected_22_23 && is_connected_24_26  && is_connected_25_27  && !unallowed_connection_present ) {

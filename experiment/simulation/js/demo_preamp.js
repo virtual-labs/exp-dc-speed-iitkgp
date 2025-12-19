@@ -58,7 +58,7 @@ jsPlumb.ready(function () {
 	// for all live red connection//
         endpoint = {
             anchors: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 8, stroke: "#C50806" },
+            connectorStyle: { strokeWidth: 4, stroke: "#C50806" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 100,
@@ -74,7 +74,7 @@ jsPlumb.ready(function () {
 					///black wire
 	endpoint_ground = {
             anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 10, stroke: "black" },
+            connectorStyle: { strokeWidth: 4, stroke: "black" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 10,
@@ -90,7 +90,7 @@ jsPlumb.ready(function () {
 					
 			endpoint_blue = {
             anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth: 10, stroke: "#55DEF6" },
+            connectorStyle: { strokeWidth: 4, stroke: "#55DEF6" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 10,
@@ -125,7 +125,7 @@ jsPlumb.ready(function () {
     instance = jsPlumb.getInstance({
         DragOptions: { cursor: 'wait', zIndex: 20 },
         Endpoint: [ "Image", { url: "./images/littledot.png" } ],
-        Connector: [ "Bezier", { curviness:-50 } ],
+        Connector: [ "Bezier", { curviness:-100 } ],
         Container: "canvas"
     });
 	
@@ -158,14 +158,29 @@ jsPlumb.ready(function () {
 			e22 = prepare("bd22"),
             e23 = prepare("bd23");
 			
+			e10.canvas.style.pointerEvents = "none";///disable first
+			 e10.setEnabled(false);///stop the reconnection
+			e11.canvas.style.pointerEvents = "none";///disable first
+			 e11.setEnabled(false);///stop the reconnection
+			e15.canvas.style.pointerEvents = "none";///disable first
+			 e15.setEnabled(false);///stop the reconnection
 			
              //instance.connect({ source: e28, target: e38 });
-			 
+			var name1, name2; 
 			 
 			 //delete clicked connection
       instance.bind("click", function (conn, originalEvent) {
 		  
-           if ( confirm("Delete connection from " + conn.sourceId + " to " + conn.targetId + "?")) {////for clicking on a connection
+           ///NEW ADDED FOR LOOP TO DISPLAY ENDPOINT NAMES DURING DELETE CONNECTION
+		 for(var cpoint =1; cpoint<=23; cpoint++){
+			 if(conn.sourceId=='bd'+cpoint){
+				 name1 = document.getElementById(conn.sourceId).getAttribute("name");
+			 }
+			 if(conn.targetId=='bd'+cpoint){ 
+		  name2= document.getElementById(conn.targetId).getAttribute("name");
+		 }
+		 } 
+           if ( confirm('Delete connection from'+' ' + name1 +' '+ 'to' + ' '+ name2 + '?')) {////for clicking on a connection
                instance.deleteConnection(conn);			  
 			         }
        }); 
